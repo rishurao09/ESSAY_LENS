@@ -50,7 +50,7 @@ export function EssayEditor({
             className="text-xs px-3.5 py-1.5 rounded-full border transition-all duration-200 hover:scale-105 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-1"
             style={{
               borderColor: "rgba(255, 255, 255, 0.4)",
-              backgroundColor: "rgba(255, 255, 255, 0.45)",
+              backgroundColor: "rgba(255, 255, 255, 0.35)",
               backdropFilter: "blur(8px)",
               color: "hsl(var(--primary))",
               boxShadow: "0 2px 8px rgba(0, 0, 0, 0.02)",

@@ -272,7 +272,7 @@ function InfoPanel() {
         className="rounded-2xl border p-5 text-xs leading-relaxed glass-panel"
         style={{
           borderColor: "rgba(255, 255, 255, 0.4)",
-          backgroundColor: "rgba(255, 255, 255, 0.25)",
+          backgroundColor: "rgba(255, 255, 255, 0.18)",
         }}
       >
         <p className="font-bold uppercase tracking-wider text-[10px] mb-2" style={{ color: "hsl(var(--foreground))" }}>

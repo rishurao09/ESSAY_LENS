@@ -133,7 +133,7 @@ export function AnalysisSidebar({ result, isLoading }: AnalysisSidebarProps) {
                 key={i}
                 className="text-xs px-2.5 py-1 rounded-full border"
                 style={{
-                  backgroundColor: "rgba(255, 255, 255, 0.4)",
+                  backgroundColor: "rgba(255, 255, 255, 0.3)",
                   borderColor: "rgba(255, 255, 255, 0.3)",
                   color: "hsl(var(--muted-foreground))",
                   backdropFilter: "blur(4px)",
@@ -255,7 +255,7 @@ function StatBox({
       className="rounded-xl p-3 text-center border"
       style={{
         borderColor: "rgba(255, 255, 255, 0.4)",
-        backgroundColor: "rgba(255, 255, 255, 0.45)",
+        backgroundColor: "rgba(255, 255, 255, 0.35)",
         backdropFilter: "blur(8px)",
         gridColumn: span ? `span ${span}` : undefined,
         boxShadow: "0 2px 8px rgba(0, 0, 0, 0.01)",

@@ -292,7 +292,7 @@ function StatCard({
       ? "rgba(239, 68, 68, 0.08)"
       : color === "orange"
       ? "rgba(249, 115, 22, 0.08)"
-      : "rgba(255, 255, 255, 0.4)";
+      : "rgba(255, 255, 255, 0.3)";
 
   return (
     <div
@@ -327,7 +327,7 @@ function MetricCard({
       className="rounded-2xl p-4 text-center border glass-panel"
       style={{
         borderColor: highlight ? "rgba(249, 115, 22, 0.3)" : "rgba(255, 255, 255, 0.4)",
-        backgroundColor: highlight ? "rgba(249, 115, 22, 0.04)" : "rgba(255, 255, 255, 0.45)",
+        backgroundColor: highlight ? "rgba(249, 115, 22, 0.04)" : "rgba(255, 255, 255, 0.35)",
         boxShadow: "0 4px 15px rgba(0, 0, 0, 0.01)",
       }}
     >
@@ -422,7 +422,7 @@ function WrongExample({ example }: { example: typeof evaluationResults.confident
         className="px-5 py-4 border-b flex items-start gap-3"
         style={{
           borderColor: "rgba(255, 255, 255, 0.3)",
-          backgroundColor: "rgba(255, 255, 255, 0.3)",
+          backgroundColor: "rgba(255, 255, 255, 0.22)",
         }}
       >
         <div className="flex-1">

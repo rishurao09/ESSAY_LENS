@@ -65,7 +65,7 @@ export default function RootLayout({
             className="rounded-2xl border backdrop-blur-md max-w-7xl mx-auto"
             style={{
               borderColor: "rgba(255, 255, 255, 0.4)",
-              backgroundColor: "rgba(255, 255, 255, 0.45)",
+              backgroundColor: "rgba(255, 255, 255, 0.35)",
               boxShadow: "0 4px 30px rgba(0, 0, 0, 0.03)",
             }}
           >

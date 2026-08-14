@@ -310,7 +310,7 @@ function Pipeline() {
           className="flex items-center gap-3 px-5 py-3 text-xs sm:text-sm border-b last:border-b-0"
           style={{
             borderColor: "rgba(255, 255, 255, 0.3)",
-            backgroundColor: i % 2 === 0 ? "rgba(255, 255, 255, 0.25)" : "transparent",
+            backgroundColor: i % 2 === 0 ? "rgba(255, 255, 255, 0.18)" : "transparent",
           }}
         >
           <span
