@@ -34,11 +34,11 @@ export function EssayEditor({
   }, []);
 
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-4 animate-fade-in">
       {/* Example essay buttons */}
-      <div className="flex flex-wrap gap-2">
+      <div className="flex flex-wrap gap-2 items-center">
         <span
-          className="text-xs font-medium self-center"
+          className="text-xs font-semibold uppercase tracking-wider"
           style={{ color: "hsl(var(--muted-foreground))" }}
         >
           Try an example:
@@ -47,10 +47,13 @@ export function EssayEditor({
           <button
             key={essay.id}
             onClick={() => handleExampleLoad(essay.text)}
-            className="text-xs px-3 py-1 rounded-full border transition-colors hover:bg-gray-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-1"
+            className="text-xs px-3.5 py-1.5 rounded-full border transition-all duration-200 hover:scale-105 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-1"
             style={{
-              borderColor: "hsl(var(--border))",
-              color: "hsl(var(--muted-foreground))",
+              borderColor: "rgba(255, 255, 255, 0.4)",
+              backgroundColor: "rgba(255, 255, 255, 0.45)",
+              backdropFilter: "blur(8px)",
+              color: "hsl(var(--primary))",
+              boxShadow: "0 2px 8px rgba(0, 0, 0, 0.02)",
             }}
             aria-label={`Load example: ${essay.title}`}
           >
@@ -60,7 +63,7 @@ export function EssayEditor({
       </div>
 
       {/* Textarea */}
-      <div className="relative">
+      <div className="relative rounded-2xl overflow-hidden glass-panel" style={{ boxShadow: "0 8px 32px 0 rgba(0,0,0,0.03)" }}>
         <textarea
           ref={textareaRef}
           id="essay-input"
@@ -70,15 +73,10 @@ export function EssayEditor({
           aria-label="Essay text input"
           aria-describedby="essay-stats essay-hint"
           disabled={isLoading}
-          className="w-full min-h-[420px] md:min-h-[520px] resize-y rounded-xl border p-5 text-base leading-relaxed transition-colors focus:outline-none focus:ring-2 focus:ring-offset-1 disabled:opacity-50 disabled:cursor-not-allowed"
+          className="w-full min-h-[420px] md:min-h-[520px] resize-y p-6 text-base leading-relaxed bg-transparent border-0 focus:outline-none focus:ring-0 disabled:opacity-50 disabled:cursor-not-allowed"
           style={{
             fontFamily: "var(--font-serif)",
-            borderColor: isTooShort || isTooLong
-              ? "hsl(0 72% 51% / 0.6)"
-              : "hsl(var(--border))",
-            backgroundColor: "hsl(var(--card))",
             color: "hsl(var(--foreground))",
-            boxShadow: "inset 0 1px 3px hsl(220 20% 12% / 0.04)",
           }}
           spellCheck
           maxLength={40000}
@@ -87,7 +85,7 @@ export function EssayEditor({
         {text.length > 0 && !isLoading && (
           <button
             onClick={() => setText("")}
-            className="absolute top-3 right-3 text-xs px-2 py-1 rounded opacity-60 hover:opacity-100 transition-opacity"
+            className="absolute top-4 right-4 text-xs px-2.5 py-1 rounded-md bg-white/40 hover:bg-white/70 backdrop-blur-sm border border-white/20 transition-all opacity-80 hover:opacity-100"
             style={{ color: "hsl(var(--muted-foreground))" }}
             aria-label="Clear essay"
           >
@@ -105,7 +103,7 @@ export function EssayEditor({
       >
         <div className="flex gap-4" style={{ color: "hsl(var(--muted-foreground))" }}>
           <span>
-            <strong style={{ color: isTooLong ? "hsl(0 72% 51%)" : "hsl(var(--foreground))" }}>
+            <strong style={{ color: isTooLong ? "hsl(0 75% 50%)" : "hsl(var(--foreground))" }}>
               {wordCount.toLocaleString()}
             </strong>{" "}
             words
@@ -120,12 +118,12 @@ export function EssayEditor({
         </div>
 
         {isTooShort && (
-          <span className="text-xs" style={{ color: "hsl(0 72% 51%)" }}>
+          <span className="text-xs font-medium" style={{ color: "hsl(0 75% 50%)" }}>
             Add at least {minWords - wordCount} more words for reliable analysis
           </span>
         )}
         {isTooLong && (
-          <span className="text-xs" style={{ color: "hsl(0 72% 51%)" }}>
+          <span className="text-xs font-medium" style={{ color: "hsl(0 75% 50%)" }}>
             Essay exceeds {maxWords.toLocaleString()} word limit
           </span>
         )}
@@ -136,13 +134,14 @@ export function EssayEditor({
         onClick={() => canAnalyze && onAnalyze(text)}
         disabled={!canAnalyze}
         id="analyze-button"
-        className="w-full py-3 px-6 rounded-xl font-semibold text-sm transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed"
+        className="w-full py-3.5 px-6 rounded-2xl font-semibold text-sm transition-all duration-300 transform active:scale-[0.99] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed"
         style={{
-          backgroundColor: canAnalyze
-            ? "hsl(var(--primary))"
-            : "hsl(var(--border))",
+          background: canAnalyze
+            ? "linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(220 70% 20%) 100%)"
+            : "rgba(0, 0, 0, 0.05)",
+          border: canAnalyze ? "1px solid rgba(255, 255, 255, 0.1)" : "1px solid rgba(0, 0, 0, 0.05)",
           color: canAnalyze ? "hsl(var(--primary-foreground))" : "hsl(var(--muted-foreground))",
-          boxShadow: canAnalyze ? "0 2px 8px hsl(var(--primary) / 0.25)" : "none",
+          boxShadow: canAnalyze ? "0 4px 20px hsl(var(--primary) / 0.25)" : "none",
         }}
         aria-label={isLoading ? "Analyzing essay..." : "Analyze essay"}
       >

@@ -89,29 +89,28 @@ export function HighlightedEssay({
   }
 
   return (
-    <div className="flex flex-col gap-3">
+    <div className="flex flex-col gap-4 animate-fade-in">
       {/* Legend */}
       <div
-        className="flex items-center gap-4 text-xs flex-wrap"
+        className="flex items-center gap-4 text-xs flex-wrap px-1"
         aria-label="Highlight intensity legend"
       >
-        <span style={{ color: "hsl(var(--muted-foreground))" }}>Signal intensity:</span>
-        <LegendItem color="hsl(142 60% 44%)" label="Low" />
-        <LegendItem color="hsl(40 95% 48%)" label="Some" />
+        <span className="font-semibold uppercase tracking-wider text-[10px]" style={{ color: "hsl(var(--muted-foreground))" }}>Signal intensity:</span>
+        <LegendItem color="hsl(142 65% 40%)" label="Low" />
+        <LegendItem color="hsl(38 92% 48%)" label="Some" />
         <LegendItem color="hsl(25 90% 50%)" label="Elevated" />
-        <LegendItem color="hsl(0 72% 51%)" label="Strong" />
+        <LegendItem color="hsl(0 75% 50%)" label="Strong" />
         <span style={{ color: "hsl(var(--muted-foreground))" }}>
-          · Click a highlighted sentence to see evidence
+          · Click highlighted text to see evidence
         </span>
       </div>
 
       {/* Essay text with highlights */}
       <div
-        className="essay-text p-5 rounded-xl border leading-loose"
+        className="essay-text p-7 rounded-2xl leading-loose glass-panel"
         style={{
-          borderColor: "hsl(var(--border))",
-          backgroundColor: "hsl(var(--card))",
           whiteSpace: "pre-wrap",
+          boxShadow: "0 8px 32px 0 rgba(0, 0, 0, 0.03)",
         }}
         role="article"
         aria-label="Essay with highlighted passages"
@@ -124,10 +123,10 @@ export function HighlightedEssay({
 
 function LegendItem({ color, label }: { color: string; label: string }) {
   return (
-    <span className="flex items-center gap-1.5">
+    <span className="flex items-center gap-1.5 font-medium">
       <span
-        className="inline-block w-3 h-3 rounded-sm"
-        style={{ backgroundColor: color, opacity: 0.7 }}
+        className="inline-block w-2.5 h-2.5 rounded-full"
+        style={{ backgroundColor: color, opacity: 0.8 }}
         aria-hidden="true"
       />
       <span style={{ color: "hsl(var(--muted-foreground))" }}>{label}</span>

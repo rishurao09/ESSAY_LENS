@@ -39,11 +39,10 @@ export function EvidencePanel({ sentence, onClose }: EvidencePanelProps) {
   return (
     <div
       ref={panelRef}
-      className="animate-fade-in rounded-xl border overflow-hidden"
+      className="animate-fade-in rounded-2xl glass-panel overflow-hidden border"
       style={{
-        borderColor: "hsl(var(--border))",
-        backgroundColor: "hsl(var(--card))",
-        boxShadow: "0 4px 24px hsl(220 20% 12% / 0.08)",
+        borderColor: "rgba(255, 255, 255, 0.4)",
+        boxShadow: "0 12px 40px 0 rgba(31, 38, 135, 0.06)",
       }}
       role="region"
       aria-label="Evidence panel for selected sentence"
@@ -51,13 +50,13 @@ export function EvidencePanel({ sentence, onClose }: EvidencePanelProps) {
     >
       {/* Header */}
       <div
-        className="flex items-start justify-between gap-3 p-4 border-b"
-        style={{ borderColor: "hsl(var(--border))" }}
+        className="flex items-start justify-between gap-3 p-5 border-b"
+        style={{ borderColor: "rgba(255, 255, 255, 0.3)" }}
       >
         <div className="flex-1 min-w-0">
-          <div className="flex items-center gap-2 mb-1">
+          <div className="flex items-center gap-2.5 mb-1.5">
             <span
-              className={`text-xs font-semibold px-2 py-0.5 rounded-full ${bandClass}`}
+              className={`text-[10px] uppercase font-bold tracking-wider px-2.5 py-0.5 rounded-full ${bandClass}`}
             >
               {sentence.band === "low"
                 ? "Low signal"
@@ -67,12 +66,12 @@ export function EvidencePanel({ sentence, onClose }: EvidencePanelProps) {
                 ? "Elevated signals"
                 : "Strong signals"}
             </span>
-            <span className="text-xs" style={{ color: "hsl(var(--muted-foreground))" }}>
+            <span className="text-xs font-medium" style={{ color: "hsl(var(--muted-foreground))" }}>
               Score: {formatPercent(sentence.score)}
             </span>
           </div>
           <p
-            className="text-sm leading-relaxed line-clamp-3"
+            className="text-sm leading-relaxed line-clamp-3 font-medium"
             style={{
               fontFamily: "var(--font-serif)",
               color: "hsl(var(--foreground))",
@@ -84,7 +83,7 @@ export function EvidencePanel({ sentence, onClose }: EvidencePanelProps) {
         <button
           ref={closeRef}
           onClick={onClose}
-          className="shrink-0 p-1.5 rounded-lg hover:bg-gray-100 transition-colors focus-visible:outline-none focus-visible:ring-2"
+          className="shrink-0 p-1.5 rounded-xl hover:bg-white/40 border border-transparent hover:border-white/20 transition-all focus-visible:outline-none focus-visible:ring-2"
           aria-label="Close evidence panel"
         >
           <svg
@@ -93,7 +92,7 @@ export function EvidencePanel({ sentence, onClose }: EvidencePanelProps) {
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
-            strokeWidth="2"
+            strokeWidth="2.5"
             strokeLinecap="round"
             aria-hidden="true"
           >
@@ -103,16 +102,16 @@ export function EvidencePanel({ sentence, onClose }: EvidencePanelProps) {
       </div>
 
       {/* Why was this flagged? */}
-      <div className="p-4">
+      <div className="p-5">
         <h4
-          className="text-xs font-semibold uppercase tracking-wider mb-3"
+          className="text-[10px] font-bold uppercase tracking-wider mb-3.5"
           style={{ color: "hsl(var(--muted-foreground))" }}
         >
           Why was this flagged?
         </h4>
 
         {evidenceData.length === 0 ? (
-          <p className="text-sm" style={{ color: "hsl(var(--muted-foreground))" }}>
+          <p className="text-xs leading-relaxed" style={{ color: "hsl(var(--muted-foreground))" }}>
             This sentence was flagged based on its position within the essay context.
             No single signal contributed strongly on its own.
           </p>
@@ -126,15 +125,15 @@ export function EvidencePanel({ sentence, onClose }: EvidencePanelProps) {
 
         {/* Disclaimer */}
         <div
-          className="mt-4 p-3 rounded-lg text-xs leading-relaxed"
+          className="mt-5 p-4 rounded-xl text-xs leading-relaxed border bg-white/25 border-white/25"
           style={{
-            backgroundColor: "hsl(var(--secondary))",
             color: "hsl(var(--muted-foreground))",
+            boxShadow: "0 2px 8px rgba(0,0,0,0.01)",
           }}
           role="note"
           aria-label="Important disclaimer"
         >
-          <strong className="text-xs">What this does not mean:</strong>{" "}
+          <strong className="text-xs font-semibold block mb-1" style={{ color: "hsl(var(--foreground))" }}>What this does not mean:</strong>{" "}
           {sentence.evidence.disclaimer}
         </div>
       </div>
@@ -157,34 +156,34 @@ function EvidenceItem({
 }) {
   const dirColor =
     item.direction === "toward_ai"
-      ? "hsl(16 86% 52%)"
+      ? "hsl(16 85% 52%)"
       : item.direction === "toward_human"
-      ? "hsl(142 60% 44%)"
-      : "hsl(220 10% 60%)";
+      ? "hsl(142 65% 40%)"
+      : "hsl(220 15% 50%)";
 
   const dirLabel =
     item.direction === "toward_ai"
-      ? "Higher machine-writing likelihood"
+      ? "Higher machine likelihood"
       : item.direction === "toward_human"
-      ? "Lower machine-writing likelihood"
+      ? "Lower machine likelihood"
       : "Neutral";
 
   return (
     <div
-      className="rounded-lg p-3 border"
+      className="rounded-xl p-3.5 border bg-white/20"
       style={{
-        borderColor: "hsl(var(--border))",
-        backgroundColor: "hsl(var(--background))",
+        borderColor: "rgba(255, 255, 255, 0.4)",
+        boxShadow: "0 2px 8px rgba(0, 0, 0, 0.01)",
       }}
     >
-      <div className="flex items-center justify-between mb-1">
-        <span className="text-xs font-semibold" style={{ color: "hsl(var(--foreground))" }}>
+      <div className="flex items-center justify-between mb-1.5">
+        <span className="text-xs font-bold" style={{ color: "hsl(var(--foreground))" }}>
           {item.displayName}
         </span>
         <span
-          className="text-xs px-1.5 py-0.5 rounded"
+          className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full"
           style={{
-            backgroundColor: `${dirColor}18`,
+            backgroundColor: `${dirColor}12`,
             color: dirColor,
           }}
         >
@@ -192,27 +191,27 @@ function EvidenceItem({
         </span>
       </div>
 
-      <p className="text-xs leading-relaxed mb-2" style={{ color: "hsl(var(--foreground))" }}>
+      <p className="text-xs leading-relaxed mb-2 font-medium" style={{ color: "hsl(var(--foreground))" }}>
         {item.explanation}
       </p>
 
-      <p className="text-xs leading-relaxed mb-2" style={{ color: "hsl(var(--muted-foreground))" }}>
+      <p className="text-[11px] leading-relaxed mb-3" style={{ color: "hsl(var(--muted-foreground))" }}>
         {item.detail}
       </p>
 
       {/* Raw metrics */}
       {item.rawMetrics.length > 0 && (
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-1.5">
           {item.rawMetrics.map((metric, i) => (
             <div
               key={i}
-              className="text-xs rounded px-2 py-1"
+              className="text-[10px] font-medium rounded-lg px-2.5 py-1 border bg-white/35"
               style={{
-                backgroundColor: "hsl(var(--secondary))",
+                borderColor: "rgba(255, 255, 255, 0.3)",
                 color: "hsl(var(--muted-foreground))",
               }}
             >
-              <span className="font-medium">{metric.label}:</span> {metric.value}
+              <span className="font-semibold">{metric.label}:</span> {metric.value}
             </div>
           ))}
         </div>

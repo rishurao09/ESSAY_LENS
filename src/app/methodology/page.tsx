@@ -9,15 +9,15 @@ export const metadata: Metadata = {
 
 export default function MethodologyPage() {
   return (
-    <div className="max-w-3xl mx-auto px-4 sm:px-6 py-10">
-      <header className="mb-10">
+    <div className="max-w-3xl mx-auto px-4 sm:px-6 py-10 relative z-10">
+      <header className="mb-10 animate-fade-in">
         <h1
-          className="text-3xl font-bold mb-3"
-          style={{ fontFamily: "var(--font-serif)", color: "hsl(var(--foreground))" }}
+          className="text-3xl sm:text-4xl font-extrabold mb-3 tracking-tight"
+          style={{ color: "hsl(var(--primary))" }}
         >
           Methodology
         </h1>
-        <p className="text-lg leading-relaxed" style={{ color: "hsl(var(--muted-foreground))" }}>
+        <p className="text-sm sm:text-base leading-relaxed" style={{ color: "hsl(var(--muted-foreground))" }}>
           How Essay Lens works — in plain English and technical detail.
         </p>
       </header>
@@ -233,19 +233,19 @@ export default function MethodologyPage() {
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
-    <section>
+    <section className="glass-panel p-6 rounded-2xl shadow-sm border" style={{ borderColor: "rgba(255, 255, 255, 0.4)", boxShadow: "0 8px 32px 0 rgba(0, 0, 0, 0.02)" }}>
       <h2
-        className="text-xl font-semibold mb-4 pb-2 border-b"
+        className="text-lg font-bold mb-4 pb-2 border-b uppercase tracking-wider text-[11px]"
         style={{
-          fontFamily: "var(--font-serif)",
-          color: "hsl(var(--foreground))",
-          borderColor: "hsl(var(--border))",
+          fontFamily: "var(--font-sans)",
+          color: "hsl(var(--primary))",
+          borderColor: "rgba(255, 255, 255, 0.3)",
         }}
       >
         {title}
       </h2>
       <div
-        className="space-y-3 text-sm leading-relaxed"
+        className="space-y-4 text-xs sm:text-sm leading-relaxed"
         style={{ color: "hsl(var(--foreground))" }}
       >
         {children}
@@ -264,28 +264,28 @@ function CalloutBox({
   const colors =
     type === "warning"
       ? {
-          bg: "hsl(40 95% 48% / 0.08)",
-          border: "hsl(40 95% 48% / 0.4)",
+          bg: "rgba(251, 146, 60, 0.06)",
+          border: "rgba(251, 146, 60, 0.4)",
           label: "⚠️ Note",
         }
       : {
-          bg: "hsl(220 60% 32% / 0.06)",
-          border: "hsl(220 60% 32% / 0.25)",
+          bg: "rgba(59, 130, 246, 0.06)",
+          border: "rgba(59, 130, 246, 0.4)",
           label: "ℹ️ Note",
         };
 
   return (
     <div
-      className="rounded-lg p-4 border text-sm"
+      className="rounded-xl p-4 border text-xs sm:text-sm glass-panel border-l-4"
       style={{
         backgroundColor: colors.bg,
-        borderColor: colors.border,
-        borderLeft: `3px solid ${colors.border}`,
+        borderColor: "rgba(255, 255, 255, 0.3)",
+        borderLeftColor: colors.border,
       }}
       role="note"
     >
-      <span className="font-semibold">{colors.label}: </span>
-      {children}
+      <span className="font-bold text-[10px] uppercase tracking-wider block mb-1">{colors.label}</span>
+      <div className="leading-relaxed font-medium">{children}</div>
     </div>
   );
 }
@@ -303,28 +303,28 @@ function Pipeline() {
   ];
 
   return (
-    <div className="rounded-xl border overflow-hidden" style={{ borderColor: "hsl(var(--border))" }}>
+    <div className="rounded-2xl border overflow-hidden glass-panel" style={{ borderColor: "rgba(255,255,255,0.4)" }}>
       {steps.map((step, i) => (
         <div
           key={i}
-          className="flex items-center gap-3 px-4 py-2.5 text-sm border-b last:border-b-0"
+          className="flex items-center gap-3 px-5 py-3 text-xs sm:text-sm border-b last:border-b-0"
           style={{
-            borderColor: "hsl(var(--border))",
-            backgroundColor: i % 2 === 0 ? "hsl(var(--card))" : "hsl(var(--secondary))",
+            borderColor: "rgba(255, 255, 255, 0.3)",
+            backgroundColor: i % 2 === 0 ? "rgba(255, 255, 255, 0.25)" : "transparent",
           }}
         >
           <span
-            className="shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-semibold"
+            className="shrink-0 w-5.5 h-5.5 rounded-full flex items-center justify-center text-[10px] font-bold"
             style={{
               backgroundColor: "hsl(var(--primary))",
-              color: "hsl(var(--primary-foreground))",
+              color: "white",
             }}
           >
             {i + 1}
           </span>
-          <span style={{ color: "hsl(var(--foreground))" }}>{step}</span>
+          <span className="font-medium text-gray-800">{step}</span>
           {i < steps.length - 1 && (
-            <span className="ml-auto text-xs" style={{ color: "hsl(var(--muted-foreground))" }}>↓</span>
+            <span className="ml-auto text-xs opacity-50">↓</span>
           )}
         </div>
       ))}

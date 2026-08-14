@@ -18,33 +18,33 @@ export function AnalysisSidebar({ result, isLoading }: AnalysisSidebarProps) {
   const bandClass = bandColorClass(overall.band);
 
   return (
-    <div className="flex flex-col gap-5 animate-fade-in">
+    <div className="flex flex-col gap-6 animate-fade-in">
       {/* Overall band */}
-      <section aria-label="Overall assessment">
+      <section aria-label="Overall assessment" className="glass-panel p-5 rounded-2xl">
         <div
           className={`rounded-xl p-5 ${bandClass}`}
-          style={{ border: "1px solid currentColor" }}
+          style={{ border: "1px solid currentColor", boxShadow: "0 4px 20px rgba(0,0,0,0.01)" }}
         >
-          <div className="text-xs font-semibold uppercase tracking-wider opacity-70 mb-1">
+          <div className="text-[10px] font-bold uppercase tracking-wider opacity-85 mb-1.5">
             Overall Assessment
           </div>
-          <div className="text-base font-semibold leading-snug">{overall.bandLabel}</div>
-          <div className="text-xs mt-1 opacity-70">
+          <div className="text-base font-bold leading-snug">{overall.bandLabel}</div>
+          <div className="text-xs mt-1.5 opacity-80 font-medium">
             Confidence: {formatPercent(overall.confidence)} ·{" "}
             Score: {formatPercent(overall.score)}
           </div>
         </div>
 
-        <p className="text-xs mt-2 leading-relaxed" style={{ color: "hsl(var(--muted-foreground))" }}>
+        <p className="text-xs mt-3 leading-relaxed" style={{ color: "hsl(var(--muted-foreground))" }}>
           <strong>This is not proof of AI authorship.</strong> Statistical signals only.
           Human writing can trigger high scores. AI writing can trigger low scores.
         </p>
       </section>
 
       {/* Document stats */}
-      <section aria-label="Document statistics">
+      <section aria-label="Document statistics" className="glass-panel p-5 rounded-2xl">
         <h3
-          className="text-xs font-semibold uppercase tracking-wider mb-2"
+          className="text-[10px] font-bold uppercase tracking-wider mb-3.5"
           style={{ color: "hsl(var(--muted-foreground))" }}
         >
           Document Statistics
@@ -62,14 +62,14 @@ export function AnalysisSidebar({ result, isLoading }: AnalysisSidebarProps) {
       </section>
 
       {/* Signal breakdown */}
-      <section aria-label="Signal breakdown by category">
+      <section aria-label="Signal breakdown by category" className="glass-panel p-5 rounded-2xl">
         <h3
-          className="text-xs font-semibold uppercase tracking-wider mb-3"
+          className="text-[10px] font-bold uppercase tracking-wider mb-4"
           style={{ color: "hsl(var(--muted-foreground))" }}
         >
           Signal Breakdown
         </h3>
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-3.5">
           <SignalBar
             label="Structural regularity"
             value={categoryScores.structural}
@@ -120,9 +120,9 @@ export function AnalysisSidebar({ result, isLoading }: AnalysisSidebarProps) {
 
       {/* Notable patterns */}
       {features.documentFormulaic.matches.length > 0 && (
-        <section aria-label="Notable patterns">
+        <section aria-label="Notable patterns" className="glass-panel p-5 rounded-2xl">
           <h3
-            className="text-xs font-semibold uppercase tracking-wider mb-2"
+            className="text-[10px] font-bold uppercase tracking-wider mb-3"
             style={{ color: "hsl(var(--muted-foreground))" }}
           >
             Formulaic Phrases Found
@@ -131,11 +131,12 @@ export function AnalysisSidebar({ result, isLoading }: AnalysisSidebarProps) {
             {features.documentFormulaic.matches.slice(0, 8).map((m, i) => (
               <span
                 key={i}
-                className="text-xs px-2 py-0.5 rounded-full"
+                className="text-xs px-2.5 py-1 rounded-full border"
                 style={{
-                  backgroundColor: "hsl(var(--secondary))",
-                  border: "1px solid hsl(var(--border))",
+                  backgroundColor: "rgba(255, 255, 255, 0.4)",
+                  borderColor: "rgba(255, 255, 255, 0.3)",
                   color: "hsl(var(--muted-foreground))",
+                  backdropFilter: "blur(4px)",
                 }}
                 title={`Category: ${m.category}, Count: ${m.count}`}
               >
@@ -147,9 +148,9 @@ export function AnalysisSidebar({ result, isLoading }: AnalysisSidebarProps) {
       )}
 
       {/* Rhythm stats */}
-      <section aria-label="Sentence rhythm statistics">
+      <section aria-label="Sentence rhythm statistics" className="glass-panel p-5 rounded-2xl">
         <h3
-          className="text-xs font-semibold uppercase tracking-wider mb-2"
+          className="text-[10px] font-bold uppercase tracking-wider mb-3"
           style={{ color: "hsl(var(--muted-foreground))" }}
         >
           Sentence Rhythm
@@ -172,15 +173,15 @@ export function AnalysisSidebar({ result, isLoading }: AnalysisSidebarProps) {
             value={features.crossSentence.rhythmScore.toFixed(2)}
           />
         </div>
-        <p className="text-xs mt-1" style={{ color: "hsl(var(--muted-foreground))" }}>
+        <p className="text-[11px] mt-2.5 leading-relaxed" style={{ color: "hsl(var(--muted-foreground))" }}>
           CV &lt; 0.30 may indicate unusually regular prose. Typical range: 0.35–0.55.
         </p>
       </section>
 
       {/* LM Signal */}
-      <section aria-label="Language model signal">
+      <section aria-label="Language model signal" className="glass-panel p-5 rounded-2xl">
         <h3
-          className="text-xs font-semibold uppercase tracking-wider mb-2"
+          className="text-[10px] font-bold uppercase tracking-wider mb-3"
           style={{ color: "hsl(var(--muted-foreground))" }}
         >
           Language Model Signal
@@ -197,8 +198,7 @@ export function AnalysisSidebar({ result, isLoading }: AnalysisSidebarProps) {
             />
           </div>
         ) : (
-          <p className="text-xs rounded-lg p-3" style={{
-            backgroundColor: "hsl(var(--secondary))",
+          <p className="text-xs rounded-xl p-3 border leading-relaxed bg-white/20 border-white/20" style={{
             color: "hsl(var(--muted-foreground))",
           }}>
             {lmSignal.note}
@@ -207,30 +207,32 @@ export function AnalysisSidebar({ result, isLoading }: AnalysisSidebarProps) {
       </section>
 
       {/* Limitations */}
-      <details className="group">
-        <summary
-          className="cursor-pointer text-xs font-medium list-none flex items-center gap-1"
-          style={{ color: "hsl(var(--muted-foreground))" }}
-        >
-          <span className="group-open:rotate-90 transition-transform inline-block">▶</span>
-          Known limitations
-        </summary>
-        <ul className="mt-2 space-y-1">
-          {result.limitations.slice(0, 4).map((l, i) => (
-            <li
-              key={i}
-              className="text-xs leading-relaxed"
-              style={{ color: "hsl(var(--muted-foreground))" }}
-            >
-              · {l}
-            </li>
-          ))}
-        </ul>
-      </details>
+      <div className="glass-panel p-4 rounded-2xl">
+        <details className="group">
+          <summary
+            className="cursor-pointer text-xs font-semibold uppercase tracking-wider list-none flex items-center justify-between"
+            style={{ color: "hsl(var(--muted-foreground))" }}
+          >
+            Known limitations
+            <span className="group-open:rotate-180 transition-transform duration-200 text-xs">▼</span>
+          </summary>
+          <ul className="mt-3 space-y-1.5 border-t pt-3" style={{ borderColor: "rgba(255,255,255,0.2)" }}>
+            {result.limitations.slice(0, 4).map((l, i) => (
+              <li
+                key={i}
+                className="text-xs leading-relaxed"
+                style={{ color: "hsl(var(--muted-foreground))" }}
+              >
+                · {l}
+              </li>
+            ))}
+          </ul>
+        </details>
+      </div>
 
       {/* Detector version */}
       <p
-        className="text-xs"
+        className="text-[10px] uppercase font-bold tracking-widest text-center"
         style={{ color: "hsl(var(--muted-foreground))" }}
       >
         Detector v{result.detectorVersion} · Dataset v{result.datasetVersion}
@@ -250,20 +252,23 @@ function StatBox({
 }) {
   return (
     <div
-      className="rounded-lg p-2.5 text-center"
+      className="rounded-xl p-3 text-center border"
       style={{
-        backgroundColor: "hsl(var(--secondary))",
+        borderColor: "rgba(255, 255, 255, 0.4)",
+        backgroundColor: "rgba(255, 255, 255, 0.45)",
+        backdropFilter: "blur(8px)",
         gridColumn: span ? `span ${span}` : undefined,
+        boxShadow: "0 2px 8px rgba(0, 0, 0, 0.01)",
       }}
     >
       <div
-        className="text-xs mb-0.5 truncate"
+        className="text-[10px] uppercase font-bold tracking-wider mb-0.5 truncate"
         style={{ color: "hsl(var(--muted-foreground))" }}
       >
         {label}
       </div>
       <div
-        className="text-sm font-semibold"
+        className="text-sm font-bold"
         style={{ color: "hsl(var(--foreground))" }}
       >
         {value}
@@ -284,26 +289,25 @@ function SignalBar({
   const pct = Math.max(0, Math.min(100, value * 100));
   const color =
     pct < 30
-      ? "hsl(142 60% 44%)"
+      ? "hsl(142 65% 40%)"
       : pct < 55
-      ? "hsl(40 95% 48%)"
+      ? "hsl(38 92% 48%)"
       : pct < 75
       ? "hsl(25 90% 50%)"
-      : "hsl(0 72% 51%)";
+      : "hsl(0 75% 50%)";
 
   return (
     <div>
-      <div className="flex items-center justify-between mb-1">
-        <span className="text-xs font-medium" style={{ color: "hsl(var(--foreground))" }}>
+      <div className="flex items-center justify-between mb-1.5">
+        <span className="text-xs font-semibold" style={{ color: "hsl(var(--foreground))" }}>
           {label}
         </span>
-        <span className="text-xs" style={{ color: "hsl(var(--muted-foreground))" }}>
+        <span className="text-xs font-bold" style={{ color: "hsl(var(--muted-foreground))" }}>
           {pct.toFixed(0)}
         </span>
       </div>
       <div
-        className="h-1.5 w-full rounded-full overflow-hidden"
-        style={{ backgroundColor: "hsl(var(--border))" }}
+        className="h-2 w-full rounded-full overflow-hidden border border-white/20 bg-white/20"
         role="progressbar"
         aria-valuenow={pct}
         aria-valuemin={0}
@@ -315,7 +319,7 @@ function SignalBar({
           style={{ width: `${pct}%`, backgroundColor: color }}
         />
       </div>
-      <p className="text-xs mt-0.5" style={{ color: "hsl(var(--muted-foreground))" }}>
+      <p className="text-[10px] mt-1 leading-relaxed" style={{ color: "hsl(var(--muted-foreground))" }}>
         {description}
       </p>
     </div>

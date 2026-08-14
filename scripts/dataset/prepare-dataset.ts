@@ -23,7 +23,7 @@ const MOCK_HUMAN_ESSAYS = [
 interface DatasetItem {
   text: string;
   label: 'human' | 'ai';
-  features: any;
+  features: unknown;
 }
 
 async function main() {

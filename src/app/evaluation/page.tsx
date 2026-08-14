@@ -13,15 +13,15 @@ export default function EvaluationPage() {
   const cm = data.confusionMatrix;
 
   return (
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 py-10">
-      <header className="mb-8">
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 py-10 relative z-10">
+      <header className="mb-8 animate-fade-in">
         <h1
-          className="text-3xl font-bold mb-3"
-          style={{ fontFamily: "var(--font-serif)", color: "hsl(var(--foreground))" }}
+          className="text-3xl sm:text-4xl font-extrabold mb-3 tracking-tight"
+          style={{ color: "hsl(var(--primary))" }}
         >
           Evaluation
         </h1>
-        <p className="text-base leading-relaxed" style={{ color: "hsl(var(--muted-foreground))" }}>
+        <p className="text-sm sm:text-base leading-relaxed" style={{ color: "hsl(var(--muted-foreground))" }}>
           Real evaluation results from the held-out test set. This page does not cherry-pick results.
           All numbers reflect actual detector performance.
         </p>
@@ -29,15 +29,17 @@ export default function EvaluationPage() {
 
       {/* Small dataset warning */}
       <div
-        className="mb-8 rounded-xl border-l-4 p-4 text-sm"
+        className="mb-8 rounded-2xl border-l-4 p-5 text-xs leading-relaxed glass-panel"
         style={{
-          backgroundColor: "hsl(40 95% 48% / 0.08)",
-          borderColor: "hsl(40 95% 48%)",
+          borderLeftColor: "hsl(var(--primary))",
+          borderColor: "rgba(255, 255, 255, 0.4)",
           color: "hsl(var(--foreground))",
+          boxShadow: "0 8px 32px 0 rgba(0, 0, 0, 0.02)",
         }}
         role="note"
       >
-        <strong>⚠️ Small Dataset Notice:</strong> {data._meta.smallDatasetWarning}
+        <span className="font-bold text-[10px] uppercase tracking-wider block mb-1" style={{ color: "hsl(var(--primary))" }}>⚠️ Small Dataset Notice</span>
+        {data._meta.smallDatasetWarning}
       </div>
 
       <div className="space-y-10">
@@ -45,7 +47,7 @@ export default function EvaluationPage() {
         {/* Dataset */}
         <section>
           <SectionTitle>Dataset</SectionTitle>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-5">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
             <StatCard label="Total examples" value={data.dataset.total.toString()} />
             <StatCard label="Human essays" value={data.dataset.human.toString()} color="green" />
             <StatCard label="AI-generated" value={data.dataset.aiGenerated.toString()} color="red" />
@@ -56,29 +58,29 @@ export default function EvaluationPage() {
           </div>
 
           {/* Data sources */}
-          <h3 className="text-sm font-semibold mb-3" style={{ color: "hsl(var(--foreground))" }}>
+          <h3 className="text-xs font-bold uppercase tracking-wider mb-3.5" style={{ color: "hsl(var(--foreground))" }}>
             Data Sources
           </h3>
-          <div className="space-y-2">
+          <div className="space-y-3">
             {data.dataset.sources.map((source, i) => (
               <div
                 key={i}
-                className="rounded-lg border p-3 text-sm"
-                style={{ borderColor: "hsl(var(--border))", backgroundColor: "hsl(var(--card))" }}
+                className="rounded-2xl border p-4 text-xs sm:text-sm glass-panel"
+                style={{ borderColor: "rgba(255, 255, 255, 0.4)", boxShadow: "0 4px 20px rgba(0,0,0,0.01)" }}
               >
-                <div className="flex items-center gap-2 mb-1">
-                  <span className="font-semibold" style={{ color: "hsl(var(--foreground))" }}>
+                <div className="flex items-center gap-2 mb-2">
+                  <span className="font-bold text-gray-800">
                     {source.name}
                   </span>
                   <TypeBadge type={source.type} />
-                  <span className="ml-auto text-xs" style={{ color: "hsl(var(--muted-foreground))" }}>
+                  <span className="ml-auto text-[10px] font-bold uppercase tracking-wider" style={{ color: "hsl(var(--muted-foreground))" }}>
                     n={source.count}
                   </span>
                 </div>
-                <p className="text-xs" style={{ color: "hsl(var(--muted-foreground))" }}>
+                <p className="text-xs font-medium leading-relaxed" style={{ color: "hsl(var(--muted-foreground))" }}>
                   {source.description}
                 </p>
-                <p className="text-xs mt-1" style={{ color: "hsl(var(--muted-foreground))" }}>
+                <p className="text-[10px] mt-2 font-bold uppercase tracking-wider" style={{ color: "hsl(var(--muted-foreground))" }}>
                   <strong>License:</strong> {source.license}
                 </p>
               </div>
@@ -99,7 +101,7 @@ export default function EvaluationPage() {
             <MetricCard label="False Negative Rate" value={pct(data.overallMetrics.falseNegativeRate)} highlight="warn" />
             <MetricCard label="Decision Threshold" value={data.overallMetrics.threshold.toString()} />
           </div>
-          <p className="text-xs" style={{ color: "hsl(var(--muted-foreground))" }}>
+          <p className="text-xs px-1" style={{ color: "hsl(var(--muted-foreground))" }}>
             95% CI for accuracy: [{pct(data.overallMetrics.confidenceInterval95.accuracy[0])},&nbsp;
             {pct(data.overallMetrics.confidenceInterval95.accuracy[1])}] —&nbsp;
             {data.overallMetrics.confidenceInterval95.note}
@@ -109,36 +111,35 @@ export default function EvaluationPage() {
         {/* Confusion Matrix */}
         <section>
           <SectionTitle>Confusion Matrix</SectionTitle>
-          <div className="overflow-x-auto">
+          <div className="overflow-x-auto rounded-2xl border glass-panel p-1.5" style={{ borderColor: "rgba(255, 255, 255, 0.4)", boxShadow: "0 8px 32px 0 rgba(0, 0, 0, 0.02)" }}>
             <table
-              className="text-sm border-collapse"
-              style={{ borderColor: "hsl(var(--border))" }}
+              className="w-full text-xs sm:text-sm border-collapse"
               aria-label="Confusion matrix"
             >
               <thead>
                 <tr>
-                  <th className="p-3 border text-left" style={{ borderColor: "hsl(var(--border))", backgroundColor: "hsl(var(--secondary))" }}></th>
-                  <th className="p-3 border text-center" style={{ borderColor: "hsl(var(--border))", backgroundColor: "hsl(var(--secondary))" }}>Predicted: Human</th>
-                  <th className="p-3 border text-center" style={{ borderColor: "hsl(var(--border))", backgroundColor: "hsl(var(--secondary))" }}>Predicted: AI</th>
+                  <th className="p-3.5 text-left font-bold uppercase tracking-wider text-[10px] text-gray-500"></th>
+                  <th className="p-3.5 text-center font-bold uppercase tracking-wider text-[10px] text-gray-500">Predicted: Human</th>
+                  <th className="p-3.5 text-center font-bold uppercase tracking-wider text-[10px] text-gray-500">Predicted: AI</th>
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td className="p-3 border font-medium" style={{ borderColor: "hsl(var(--border))", backgroundColor: "hsl(var(--secondary))" }}>Actual: Human</td>
-                  <td className="p-3 border text-center font-semibold" style={{ borderColor: "hsl(var(--border))", backgroundColor: "hsl(142 60% 44% / 0.12)", color: "hsl(142 60% 30%)" }}>
-                    {cm.trueNegatives} ✓<div className="text-xs font-normal opacity-70">True Negatives</div>
+                <tr className="border-t border-white/20">
+                  <td className="p-3.5 font-bold text-gray-700">Actual: Human</td>
+                  <td className="p-3.5 text-center font-bold bg-emerald-500/10 text-emerald-800 rounded-xl">
+                    {cm.trueNegatives} ✓<div className="text-[10px] font-bold uppercase tracking-wider mt-0.5 opacity-80">True Negatives</div>
                   </td>
-                  <td className="p-3 border text-center font-semibold" style={{ borderColor: "hsl(var(--border))", backgroundColor: "hsl(0 72% 51% / 0.10)", color: "hsl(0 72% 35%)" }}>
-                    {cm.falsePositives} ✗<div className="text-xs font-normal opacity-70">False Positives</div>
+                  <td className="p-3.5 text-center font-bold bg-rose-500/10 text-rose-800 rounded-xl">
+                    {cm.falsePositives} ✗<div className="text-[10px] font-bold uppercase tracking-wider mt-0.5 opacity-80">False Positives</div>
                   </td>
                 </tr>
-                <tr>
-                  <td className="p-3 border font-medium" style={{ borderColor: "hsl(var(--border))", backgroundColor: "hsl(var(--secondary))" }}>Actual: AI</td>
-                  <td className="p-3 border text-center font-semibold" style={{ borderColor: "hsl(var(--border))", backgroundColor: "hsl(40 95% 48% / 0.10)", color: "hsl(40 95% 28%)" }}>
-                    {cm.falseNegatives} ✗<div className="text-xs font-normal opacity-70">False Negatives</div>
+                <tr className="border-t border-white/20">
+                  <td className="p-3.5 font-bold text-gray-700">Actual: AI</td>
+                  <td className="p-3.5 text-center font-bold bg-amber-500/10 text-amber-800 rounded-xl">
+                    {cm.falseNegatives} ✗<div className="text-[10px] font-bold uppercase tracking-wider mt-0.5 opacity-80">False Negatives</div>
                   </td>
-                  <td className="p-3 border text-center font-semibold" style={{ borderColor: "hsl(var(--border))", backgroundColor: "hsl(142 60% 44% / 0.12)", color: "hsl(142 60% 30%)" }}>
-                    {cm.truePositives} ✓<div className="text-xs font-normal opacity-70">True Positives</div>
+                  <td className="p-3.5 text-center font-bold bg-emerald-500/10 text-emerald-800 rounded-xl">
+                    {cm.truePositives} ✓<div className="text-[10px] font-bold uppercase tracking-wider mt-0.5 opacity-80">True Positives</div>
                   </td>
                 </tr>
               </tbody>
@@ -150,17 +151,19 @@ export default function EvaluationPage() {
         <section>
           <SectionTitle>ESL Fairness Analysis</SectionTitle>
           <div
-            className="rounded-xl border-l-4 p-4 mb-4"
+            className="rounded-2xl border-l-4 p-5 mb-5 glass-panel"
             style={{
-              backgroundColor: "hsl(0 72% 51% / 0.06)",
-              borderColor: "hsl(0 72% 51%)",
+              borderColor: "rgba(255, 255, 255, 0.4)",
+              borderLeftColor: "rgba(239, 68, 68, 0.4)",
+              backgroundColor: "rgba(239, 68, 68, 0.03)",
+              boxShadow: "0 8px 32px 0 rgba(0, 0, 0, 0.02)",
             }}
             role="note"
           >
-            <p className="text-sm font-semibold mb-1" style={{ color: "hsl(var(--foreground))" }}>
+            <p className="text-xs font-bold uppercase tracking-wider mb-1.5" style={{ color: "hsl(var(--foreground))" }}>
               ⚠️ ESL writers are flagged at a significantly higher rate.
             </p>
-            <p className="text-xs" style={{ color: "hsl(var(--muted-foreground))" }}>
+            <p className="text-xs font-medium leading-relaxed" style={{ color: "hsl(var(--muted-foreground))" }}>
               {data.eslFairness.interpretation}
             </p>
           </div>
@@ -261,11 +264,11 @@ function pct(v: number): string {
 function SectionTitle({ children }: { children: React.ReactNode }) {
   return (
     <h2
-      className="text-xl font-semibold mb-5 pb-2 border-b"
+      className="text-lg font-bold mb-5 pb-2 border-b uppercase tracking-wider text-[11px]"
       style={{
-        fontFamily: "var(--font-serif)",
-        color: "hsl(var(--foreground))",
-        borderColor: "hsl(var(--border))",
+        fontFamily: "var(--font-sans)",
+        color: "hsl(var(--primary))",
+        borderColor: "rgba(255, 255, 255, 0.3)",
       }}
     >
       {children}
@@ -282,24 +285,28 @@ function StatCard({
   value: string;
   color?: "green" | "red" | "orange";
 }) {
-  const bgColor =
+  const badgeColor =
     color === "green"
-      ? "hsl(142 60% 44% / 0.10)"
+      ? "rgba(16, 185, 129, 0.08)"
       : color === "red"
-      ? "hsl(0 72% 51% / 0.08)"
+      ? "rgba(239, 68, 68, 0.08)"
       : color === "orange"
-      ? "hsl(25 90% 50% / 0.10)"
-      : "hsl(var(--secondary))";
+      ? "rgba(249, 115, 22, 0.08)"
+      : "rgba(255, 255, 255, 0.4)";
 
   return (
     <div
-      className="rounded-xl p-4 text-center border"
-      style={{ borderColor: "hsl(var(--border))", backgroundColor: bgColor }}
+      className="rounded-2xl p-4 text-center border glass-panel"
+      style={{
+        borderColor: "rgba(255, 255, 255, 0.4)",
+        backgroundColor: badgeColor,
+        boxShadow: "0 4px 15px rgba(0, 0, 0, 0.01)",
+      }}
     >
-      <div className="text-xl font-bold" style={{ color: "hsl(var(--foreground))" }}>
+      <div className="text-xl font-extrabold" style={{ color: "hsl(var(--foreground))" }}>
         {value}
       </div>
-      <div className="text-xs mt-0.5" style={{ color: "hsl(var(--muted-foreground))" }}>
+      <div className="text-[10px] uppercase font-bold tracking-wider mt-1" style={{ color: "hsl(var(--muted-foreground))" }}>
         {label}
       </div>
     </div>
@@ -317,16 +324,17 @@ function MetricCard({
 }) {
   return (
     <div
-      className="rounded-xl p-4 text-center border"
+      className="rounded-2xl p-4 text-center border glass-panel"
       style={{
-        borderColor: highlight ? "hsl(40 95% 48% / 0.3)" : "hsl(var(--border))",
-        backgroundColor: highlight ? "hsl(40 95% 48% / 0.06)" : "hsl(var(--card))",
+        borderColor: highlight ? "rgba(249, 115, 22, 0.3)" : "rgba(255, 255, 255, 0.4)",
+        backgroundColor: highlight ? "rgba(249, 115, 22, 0.04)" : "rgba(255, 255, 255, 0.45)",
+        boxShadow: "0 4px 15px rgba(0, 0, 0, 0.01)",
       }}
     >
-      <div className="text-xl font-bold" style={{ color: "hsl(var(--foreground))" }}>
+      <div className="text-xl font-extrabold" style={{ color: "hsl(var(--foreground))" }}>
         {value}
       </div>
-      <div className="text-xs mt-0.5" style={{ color: "hsl(var(--muted-foreground))" }}>
+      <div className="text-[10px] uppercase font-bold tracking-wider mt-1" style={{ color: "hsl(var(--muted-foreground))" }}>
         {label}
       </div>
     </div>
@@ -335,14 +343,14 @@ function MetricCard({
 
 function TypeBadge({ type }: { type: string }) {
   const styles: Record<string, { bg: string; text: string }> = {
-    human: { bg: "hsl(142 60% 44% / 0.12)", text: "hsl(142 60% 30%)" },
-    ai: { bg: "hsl(0 72% 51% / 0.10)", text: "hsl(0 72% 35%)" },
+    human: { bg: "hsl(142 65% 40% / 0.12)", text: "hsl(142 65% 30%)" },
+    ai: { bg: "hsl(0 75% 50% / 0.10)", text: "hsl(0 75% 35%)" },
     mixed: { bg: "hsl(25 90% 50% / 0.12)", text: "hsl(25 90% 32%)" },
   };
   const s = styles[type] ?? styles.human;
   return (
     <span
-      className="text-xs px-1.5 py-0.5 rounded-full capitalize"
+      className="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded-full capitalize"
       style={{ backgroundColor: s.bg, color: s.text }}
     >
       {type}
@@ -364,25 +372,30 @@ function FairnessCard({
   color: "green" | "red";
 }) {
   const bgColor =
-    color === "green" ? "hsl(142 60% 44% / 0.08)" : "hsl(0 72% 51% / 0.08)";
+    color === "green" ? "rgba(16, 185, 129, 0.06)" : "rgba(239, 68, 68, 0.06)";
   const borderColor =
-    color === "green" ? "hsl(142 60% 44% / 0.3)" : "hsl(0 72% 51% / 0.3)";
+    color === "green" ? "rgba(16, 185, 129, 0.25)" : "rgba(239, 68, 68, 0.25)";
 
   return (
     <div
-      className="rounded-xl border p-4"
-      style={{ backgroundColor: bgColor, borderColor }}
+      className="rounded-2xl border p-5 glass-panel"
+      style={{
+        backgroundColor: bgColor,
+        borderColor: "rgba(255, 255, 255, 0.4)",
+        borderLeft: `4px solid ${borderColor}`,
+        boxShadow: "0 8px 32px 0 rgba(0,0,0,0.02)",
+      }}
     >
-      <h4 className="text-sm font-semibold mb-2" style={{ color: "hsl(var(--foreground))" }}>
+      <h4 className="text-xs font-bold uppercase tracking-wider mb-2.5" style={{ color: "hsl(var(--foreground))" }}>
         {group}
       </h4>
-      <div className="text-2xl font-bold mb-1" style={{ color: "hsl(var(--foreground))" }}>
+      <div className="text-2xl font-extrabold mb-1" style={{ color: "hsl(var(--foreground))" }}>
         {pct(fpr)} FPR
       </div>
-      <div className="text-xs mb-1" style={{ color: "hsl(var(--muted-foreground))" }}>
+      <div className="text-[10px] font-bold uppercase tracking-wider mb-1" style={{ color: "hsl(var(--muted-foreground))" }}>
         n = {n} examples
       </div>
-      <p className="text-xs" style={{ color: "hsl(var(--muted-foreground))" }}>
+      <p className="text-xs mt-1.5 leading-relaxed" style={{ color: "hsl(var(--muted-foreground))" }}>
         {note}
       </p>
     </div>
@@ -392,27 +405,33 @@ function FairnessCard({
 function WrongExample({ example }: { example: typeof evaluationResults.confidentiallyWrongExamples[0] }) {
   const categoryColor =
     example.actualLabel === "human"
-      ? "hsl(0 72% 51%)"
+      ? "hsl(0 75% 50%)"
       : example.actualLabel === "ai"
-      ? "hsl(40 95% 48%)"
+      ? "hsl(38 92% 48%)"
       : "hsl(25 90% 50%)";
 
   return (
     <div
-      className="rounded-xl border overflow-hidden"
-      style={{ borderColor: "hsl(var(--border))" }}
+      className="rounded-2xl border overflow-hidden glass-panel"
+      style={{
+        borderColor: "rgba(255, 255, 255, 0.4)",
+        boxShadow: "0 8px 32px 0 rgba(0, 0, 0, 0.02)",
+      }}
     >
       <div
-        className="px-5 py-3 border-b flex items-start gap-3"
-        style={{ borderColor: "hsl(var(--border))", backgroundColor: "hsl(var(--secondary))" }}
+        className="px-5 py-4 border-b flex items-start gap-3"
+        style={{
+          borderColor: "rgba(255, 255, 255, 0.3)",
+          backgroundColor: "rgba(255, 255, 255, 0.3)",
+        }}
       >
         <div className="flex-1">
           <div className="flex flex-wrap items-center gap-2">
-            <span className="text-sm font-semibold" style={{ color: "hsl(var(--foreground))" }}>
+            <span className="text-xs font-bold uppercase tracking-wider" style={{ color: "hsl(var(--foreground))" }}>
               {example.category}
             </span>
           </div>
-          <div className="flex gap-3 mt-1 text-xs" style={{ color: "hsl(var(--muted-foreground))" }}>
+          <div className="flex gap-4 mt-2 text-[10px] font-bold uppercase tracking-wider" style={{ color: "hsl(var(--muted-foreground))" }}>
             <span>Actual: <strong style={{ color: categoryColor }}>{example.actualLabel}</strong></span>
             <span>Predicted: <strong>{example.predictedLabel}</strong></span>
             <span>Score: <strong>{pct(example.score)}</strong></span>
@@ -424,14 +443,14 @@ function WrongExample({ example }: { example: typeof evaluationResults.confident
       <div className="p-5 space-y-4">
         {/* Excerpt */}
         <div>
-          <div className="text-xs font-semibold uppercase tracking-wide mb-2" style={{ color: "hsl(var(--muted-foreground))" }}>
+          <div className="text-[10px] font-bold uppercase tracking-wider mb-2" style={{ color: "hsl(var(--muted-foreground))" }}>
             Essay excerpt
           </div>
           <blockquote
-            className="text-sm leading-relaxed border-l-2 pl-3 italic"
+            className="text-xs sm:text-sm leading-relaxed border-l-2 pl-3 italic font-medium"
             style={{
               fontFamily: "var(--font-serif)",
-              borderColor: "hsl(var(--border))",
+              borderColor: "rgba(0, 0, 0, 0.15)",
               color: "hsl(var(--foreground))",
             }}
           >
@@ -441,13 +460,13 @@ function WrongExample({ example }: { example: typeof evaluationResults.confident
 
         {/* Signals */}
         <div>
-          <div className="text-xs font-semibold uppercase tracking-wide mb-2" style={{ color: "hsl(var(--muted-foreground))" }}>
+          <div className="text-[10px] font-bold uppercase tracking-wider mb-2" style={{ color: "hsl(var(--muted-foreground))" }}>
             Relevant signals
           </div>
-          <ul className="space-y-1">
+          <ul className="space-y-1.5">
             {example.signals.map((s, i) => (
-              <li key={i} className="text-xs flex gap-2" style={{ color: "hsl(var(--foreground))" }}>
-                <span style={{ color: "hsl(var(--muted-foreground))" }}>·</span>
+              <li key={i} className="text-xs flex gap-2 font-medium" style={{ color: "hsl(var(--foreground))" }}>
+                <span style={{ color: "rgba(0, 0, 0, 0.25)" }}>·</span>
                 {s}
               </li>
             ))}
@@ -456,23 +475,23 @@ function WrongExample({ example }: { example: typeof evaluationResults.confident
 
         {/* Why wrong */}
         <div>
-          <div className="text-xs font-semibold uppercase tracking-wide mb-2" style={{ color: "hsl(var(--muted-foreground))" }}>
+          <div className="text-[10px] font-bold uppercase tracking-wider mb-2" style={{ color: "hsl(var(--muted-foreground))" }}>
             Likely reason for failure
           </div>
-          <p className="text-sm leading-relaxed" style={{ color: "hsl(var(--foreground))" }}>
+          <p className="text-xs sm:text-sm leading-relaxed font-medium" style={{ color: "hsl(var(--foreground))" }}>
             {example.likelyReason}
           </p>
         </div>
 
         {/* Lesson */}
         <div
-          className="rounded-lg p-3 text-xs"
+          className="rounded-xl p-4 text-xs border leading-relaxed bg-white/20"
           style={{
-            backgroundColor: "hsl(var(--secondary))",
+            borderColor: "rgba(255, 255, 255, 0.3)",
             color: "hsl(var(--muted-foreground))",
           }}
         >
-          <strong>What this tells us:</strong> {example.lessonsLearned}
+          <strong className="text-[10px] font-bold uppercase tracking-wider block mb-1" style={{ color: "hsl(var(--foreground))" }}>What this tells us:</strong> {example.lessonsLearned}
         </div>
       </div>
     </div>

@@ -90,6 +90,7 @@ async function main() {
 
   // Load existing static results to keep the specific WRONG examples and details intact,
   // or generate live ones. Let's merge the evaluated metrics into evaluation-results.json.
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   let currentResults: any = {};
   if (fs.existsSync(RESULTS_PATH)) {
     currentResults = JSON.parse(fs.readFileSync(RESULTS_PATH, 'utf-8'));

@@ -33,38 +33,43 @@ export function ProgressStages({ currentStage }: ProgressStagesProps) {
 
   return (
     <div
-      className="rounded-xl border p-4 animate-fade-in"
+      className="rounded-2xl border p-5 animate-fade-in glass-panel"
       role="status"
       aria-label="Analysis progress"
       aria-live="polite"
       style={{
-        borderColor: "hsl(var(--border))",
-        backgroundColor: "hsl(var(--card))",
+        borderColor: "rgba(255, 255, 255, 0.4)",
+        boxShadow: "0 8px 32px 0 rgba(0, 0, 0, 0.03)",
       }}
     >
-      <div className="flex items-center gap-2 mb-3">
+      <div className="flex items-center gap-2 mb-4">
         <LoadingSpinner />
-        <span className="text-sm font-medium" style={{ color: "hsl(var(--foreground))" }}>
+        <span className="text-xs font-bold uppercase tracking-wider" style={{ color: "hsl(var(--foreground))" }}>
           Analyzing essay…
         </span>
       </div>
 
-      <div className="space-y-2">
+      <div className="space-y-3">
         {STAGES.map((stage, idx) => {
           const isDone = idx < currentIdx;
           const isActive = idx === currentIdx;
           const isPending = idx > currentIdx;
 
           return (
-            <div key={stage.id} className="flex items-center gap-2.5">
+            <div key={stage.id} className="flex items-center gap-3">
               <div
-                className="shrink-0 w-4 h-4 rounded-full flex items-center justify-center"
+                className="shrink-0 w-5 h-5 rounded-full flex items-center justify-center border transition-all duration-300"
                 style={{
                   backgroundColor: isDone
-                    ? "hsl(142 60% 44%)"
+                    ? "hsl(142 65% 40%)"
                     : isActive
                     ? "hsl(var(--primary))"
-                    : "hsl(var(--border))",
+                    : "rgba(255, 255, 255, 0.4)",
+                  borderColor: isDone
+                    ? "hsl(142 65% 40%)"
+                    : isActive
+                    ? "hsl(var(--primary))"
+                    : "rgba(0, 0, 0, 0.1)",
                 }}
                 aria-hidden="true"
               >
@@ -74,7 +79,7 @@ export function ProgressStages({ currentStage }: ProgressStagesProps) {
                   </svg>
                 )}
                 {isActive && (
-                  <div className="w-2 h-2 rounded-full bg-white animate-pulse" />
+                  <div className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
                 )}
               </div>
               <span
@@ -83,7 +88,7 @@ export function ProgressStages({ currentStage }: ProgressStagesProps) {
                   color: isPending
                     ? "hsl(var(--muted-foreground))"
                     : "hsl(var(--foreground))",
-                  fontWeight: isActive ? 600 : 400,
+                  fontWeight: isActive ? 700 : 500,
                 }}
               >
                 {stage.label}

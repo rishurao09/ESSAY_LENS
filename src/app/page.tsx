@@ -87,38 +87,41 @@ export default function HomePage() {
   }, []);
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 py-10 relative z-10">
       {/* Page header */}
-      <header className="mb-8 max-w-2xl">
+      <header className="mb-8 max-w-2xl animate-fade-in">
         <h1
-          className="text-2xl sm:text-3xl font-bold mb-2"
+          className="text-3xl sm:text-4xl font-extrabold mb-3 tracking-tight"
           style={{
-            fontFamily: "var(--font-serif)",
-            color: "hsl(var(--foreground))",
+            fontFamily: "var(--font-sans)",
+            color: "hsl(var(--primary))",
           }}
         >
-          Analyze Your Admissions Essay
+          Understand the writing.<br />
+          <span className="font-normal font-serif italic text-2xl sm:text-3xl text-gray-700">Not just the score.</span>
         </h1>
-        <p className="text-base leading-relaxed" style={{ color: "hsl(var(--muted-foreground))" }}>
-          Paste an essay below to identify statistical patterns associated with
-          machine-generated writing. Every result is explained with real evidence.
+        <p className="text-sm sm:text-base leading-relaxed" style={{ color: "hsl(var(--muted-foreground))" }}>
+          Analyze college admissions essays for structural and stylistic signals associated with
+          machine-generated prose. Every metric-driven result is explained with real evidence.
         </p>
       </header>
 
       {/* ESL Warning Banner */}
       <div
-        className="mb-6 rounded-xl p-4 border text-sm"
+        className="mb-8 rounded-2xl p-5 border-l-4 text-xs leading-relaxed glass-panel"
         style={{
-          backgroundColor: "hsl(220 60% 32% / 0.04)",
-          borderColor: "hsl(220 60% 32% / 0.2)",
+          borderLeftColor: "hsl(var(--primary))",
+          borderColor: "rgba(255, 255, 255, 0.4)",
           color: "hsl(var(--foreground))",
+          boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.02)",
         }}
         role="note"
         aria-label="Important fairness notice"
       >
-        <strong>Important:</strong> Automated AI detection can disproportionately affect
-        writers whose first language is not English. Statistical patterns differ across
-        language backgrounds. <strong>Never treat these results as definitive proof of
+        <span className="font-bold uppercase tracking-wider block mb-1 text-[10px]" style={{ color: "hsl(var(--primary))" }}>Fairness Notice</span>
+        Automated AI detection can disproportionately affect
+        writers whose first language is not English. Statistical writing patterns differ across
+        various language backgrounds. <strong>Never treat these results as definitive proof of
         misconduct.</strong>
       </div>
 
@@ -216,18 +219,18 @@ export default function HomePage() {
 
 function InfoPanel() {
   return (
-    <div className="flex flex-col gap-5">
+    <div className="flex flex-col gap-5 animate-fade-in">
       <div
-        className="rounded-xl border p-5"
-        style={{ borderColor: "hsl(var(--border))", backgroundColor: "hsl(var(--card))" }}
+        className="rounded-2xl border p-5 glass-panel"
+        style={{ borderColor: "rgba(255, 255, 255, 0.4)", boxShadow: "0 8px 32px 0 rgba(0, 0, 0, 0.03)" }}
       >
         <h2
-          className="text-sm font-semibold mb-3"
+          className="text-xs font-bold uppercase tracking-wider mb-4"
           style={{ color: "hsl(var(--foreground))" }}
         >
           How it works
         </h2>
-        <div className="space-y-3">
+        <div className="space-y-4">
           {[
             {
               icon: "📐",
@@ -253,10 +256,10 @@ function InfoPanel() {
             <div key={item.title} className="flex gap-3">
               <span className="text-lg shrink-0" aria-hidden="true">{item.icon}</span>
               <div>
-                <div className="text-xs font-semibold" style={{ color: "hsl(var(--foreground))" }}>
+                <div className="text-xs font-bold" style={{ color: "hsl(var(--foreground))" }}>
                   {item.title}
                 </div>
-                <div className="text-xs mt-0.5" style={{ color: "hsl(var(--muted-foreground))" }}>
+                <div className="text-[11px] leading-relaxed mt-0.5" style={{ color: "hsl(var(--muted-foreground))" }}>
                   {item.desc}
                 </div>
               </div>
@@ -266,17 +269,16 @@ function InfoPanel() {
       </div>
 
       <div
-        className="rounded-xl border p-4 text-xs leading-relaxed"
+        className="rounded-2xl border p-5 text-xs leading-relaxed glass-panel"
         style={{
-          borderColor: "hsl(var(--border))",
-          backgroundColor: "hsl(var(--secondary))",
-          color: "hsl(var(--muted-foreground))",
+          borderColor: "rgba(255, 255, 255, 0.4)",
+          backgroundColor: "rgba(255, 255, 255, 0.25)",
         }}
       >
-        <p className="font-semibold mb-1" style={{ color: "hsl(var(--foreground))" }}>
+        <p className="font-bold uppercase tracking-wider text-[10px] mb-2" style={{ color: "hsl(var(--foreground))" }}>
           What this detector cannot do:
         </p>
-        <ul className="space-y-1">
+        <ul className="space-y-1.5 font-medium" style={{ color: "hsl(var(--muted-foreground))" }}>
           <li>· Prove that AI wrote any portion of an essay</li>
           <li>· Distinguish between AI-generated and AI-polished writing with certainty</li>
           <li>· Account for individual writing style differences</li>
@@ -290,29 +292,30 @@ function InfoPanel() {
 function ErrorState({ message, onReset }: { message: string; onReset: () => void }) {
   return (
     <div
-      className="rounded-xl border p-6 text-center"
+      className="rounded-2xl border p-6 text-center glass-panel"
       style={{
-        borderColor: "hsl(0 72% 51% / 0.3)",
-        backgroundColor: "hsl(0 72% 51% / 0.04)",
+        borderColor: "rgba(239, 68, 68, 0.25)",
+        backgroundColor: "rgba(239, 68, 68, 0.03)",
+        boxShadow: "0 8px 32px 0 rgba(239, 68, 68, 0.04)",
       }}
       role="alert"
     >
       <div className="text-2xl mb-3" aria-hidden="true">⚠️</div>
       <h2
-        className="text-sm font-semibold mb-2"
+        className="text-xs font-bold uppercase tracking-wider mb-2"
         style={{ color: "hsl(var(--foreground))" }}
       >
         Analysis failed
       </h2>
       <p
-        className="text-sm mb-4 max-w-sm mx-auto"
+        className="text-xs mb-4 max-w-sm mx-auto leading-relaxed"
         style={{ color: "hsl(var(--muted-foreground))" }}
       >
         {message}
       </p>
       <button
         onClick={onReset}
-        className="px-5 py-2 rounded-lg text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2"
+        className="px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-all hover:scale-105 active:scale-95 focus-visible:outline-none focus-visible:ring-2"
         style={{
           backgroundColor: "hsl(var(--primary))",
           color: "hsl(var(--primary-foreground))",
