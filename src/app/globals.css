@@ -1,26 +1,191 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Core palette — warm academic neutral */
+  --background: 36 20% 97%;
+  --foreground: 220 20% 12%;
+
+  --card: 0 0% 100%;
+  --card-foreground: 220 20% 12%;
+
+  --border: 220 13% 87%;
+  --input: 220 13% 87%;
+  --ring: 220 60% 45%;
+
+  /* Primary: deep academic navy */
+  --primary: 220 60% 32%;
+  --primary-foreground: 0 0% 100%;
+
+  /* Secondary: warm stone */
+  --secondary: 36 15% 93%;
+  --secondary-foreground: 220 20% 20%;
+
+  --muted: 36 15% 93%;
+  --muted-foreground: 220 10% 48%;
+
+  --accent: 36 40% 88%;
+  --accent-foreground: 220 20% 15%;
+
+  --destructive: 0 72% 51%;
+  --destructive-foreground: 0 0% 98%;
+
+  /* Signal colors */
+  --signal-low: 142 60% 44%;
+  --signal-medium: 40 95% 48%;
+  --signal-high: 16 86% 52%;
+
+  --radius: 0.5rem;
+
+  /* Fonts */
+  --font-serif: "Lora", Georgia, serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Highlight intensities for flagged sentences */
+.highlight-low {
+  background-color: hsl(142 60% 44% / 0.12);
+  border-bottom: 2px solid hsl(142 60% 44% / 0.5);
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+.highlight-low:hover,
+.highlight-low.selected {
+  background-color: hsl(142 60% 44% / 0.22);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.highlight-some {
+  background-color: hsl(40 95% 48% / 0.12);
+  border-bottom: 2px solid hsl(40 95% 48% / 0.6);
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+.highlight-some:hover,
+.highlight-some.selected {
+  background-color: hsl(40 95% 48% / 0.25);
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.highlight-elevated {
+  background-color: hsl(25 90% 50% / 0.12);
+  border-bottom: 2px solid hsl(25 90% 50% / 0.65);
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+.highlight-elevated:hover,
+.highlight-elevated.selected {
+  background-color: hsl(25 90% 50% / 0.25);
+}
+
+.highlight-strong {
+  background-color: hsl(0 72% 51% / 0.10);
+  border-bottom: 2px solid hsl(0 72% 51% / 0.65);
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+.highlight-strong:hover,
+.highlight-strong.selected {
+  background-color: hsl(0 72% 51% / 0.22);
+}
+
+/* Shimmer loading effect */
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    hsl(220 13% 87% / 0.5) 0%,
+    hsl(220 13% 87% / 1) 50%,
+    hsl(220 13% 87% / 0.5) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Focus visible outline */
+:focus-visible {
+  outline: 2px solid hsl(var(--ring));
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(var(--secondary));
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--border));
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--muted-foreground));
+}
+
+/* Prose styles for essay display */
+.essay-text {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  line-height: 1.85;
+  color: hsl(var(--foreground));
+  letter-spacing: 0.01em;
+}
+
+/* Score band badge colors */
+.band-low {
+  background-color: hsl(142 60% 44% / 0.12);
+  color: hsl(142 60% 30%);
+  border: 1px solid hsl(142 60% 44% / 0.3);
+}
+.band-some {
+  background-color: hsl(40 95% 48% / 0.12);
+  color: hsl(40 95% 28%);
+  border: 1px solid hsl(40 95% 48% / 0.3);
+}
+.band-elevated {
+  background-color: hsl(25 90% 50% / 0.12);
+  color: hsl(25 90% 32%);
+  border: 1px solid hsl(25 90% 50% / 0.3);
+}
+.band-strong {
+  background-color: hsl(0 72% 51% / 0.10);
+  color: hsl(0 72% 35%);
+  border: 1px solid hsl(0 72% 51% / 0.3);
+}
+
+/* Contribution bar colors */
+.contribution-toward-ai {
+  background-color: hsl(16 86% 52%);
+}
+.contribution-toward-human {
+  background-color: hsl(142 60% 44%);
+}
+.contribution-neutral {
+  background-color: hsl(220 10% 70%);
+}
+
+/* Animation utilities */
+.animate-fade-in {
+  animation: fade-in 0.3s ease-out;
+}
+.animate-slide-in {
+  animation: slide-in 0.3s ease-out;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes slide-in {
+  from { opacity: 0; transform: translateX(20px); }
+  to { opacity: 1; transform: translateX(0); }
 }

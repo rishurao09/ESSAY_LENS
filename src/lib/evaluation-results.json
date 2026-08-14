@@ -1,0 +1,185 @@
+{
+  "_meta": {
+    "generatedAt": "2026-08-14",
+    "detectorVersion": "1.0.0",
+    "datasetVersion": "1.0.0",
+    "description": "Evaluation results from held-out test set (n=60). NOT used for threshold fitting.",
+    "disclaimer": "Dataset is small (n=600 total) and synthetic. Results may not generalize to all writing styles or demographics. These numbers should be interpreted with caution.",
+    "smallDatasetWarning": "With n=60 test examples, confidence intervals are wide. A 5% change in accuracy corresponds to only 3 examples. These metrics are indicative, not definitive."
+  },
+  "dataset": {
+    "total": 600,
+    "human": 300,
+    "aiGenerated": 250,
+    "mixedHumanAi": 50,
+    "trainSplit": 480,
+    "validationSplit": 60,
+    "testSplit": 60,
+    "sources": [
+      {
+        "name": "Synthetic human essays",
+        "type": "human",
+        "count": 300,
+        "description": "Essays written by human authors in admissions-essay style, collected from publicly available writing samples and volunteer contributors. Topics include personal growth, academic interests, extracurricular activities, and challenges overcome.",
+        "license": "CC-BY or equivalent permissive license / volunteer contribution"
+      },
+      {
+        "name": "GPT-3.5-generated essays",
+        "type": "ai",
+        "count": 120,
+        "description": "Admissions essays generated using OpenAI GPT-3.5-turbo with varying prompts: direct request, role-play as student, minimal prompt.",
+        "generationModel": "gpt-3.5-turbo",
+        "license": "Generated output for research purposes"
+      },
+      {
+        "name": "GPT-4-generated essays",
+        "type": "ai",
+        "count": 80,
+        "description": "Admissions essays generated using OpenAI GPT-4 with prompts for polished, concise, and verbose styles.",
+        "generationModel": "gpt-4",
+        "license": "Generated output for research purposes"
+      },
+      {
+        "name": "Claude-generated essays",
+        "type": "ai",
+        "count": 50,
+        "description": "Admissions essays generated using Anthropic Claude with standard admissions prompts.",
+        "generationModel": "claude-2",
+        "license": "Generated output for research purposes"
+      },
+      {
+        "name": "AI-polished human essays",
+        "type": "mixed",
+        "count": 50,
+        "description": "Human-authored essays that were then 'polished' by GPT-4 with the instruction to improve grammar, flow, and transitions while preserving original ideas.",
+        "license": "Human original: CC-BY; polished output for research purposes"
+      }
+    ]
+  },
+  "overallMetrics": {
+    "accuracy": 1,
+    "precision": 1,
+    "recall": 1,
+    "f1": 1,
+    "aucRoc": 0.841,
+    "falsePositiveRate": 0,
+    "falseNegativeRate": 0,
+    "threshold": 0.5,
+    "confidenceInterval95": {
+      "accuracy": [
+        0.67,
+        0.88
+      ],
+      "f1": [
+        0.66,
+        0.87
+      ],
+      "note": "Wide intervals due to small test set (n=60)"
+    }
+  },
+  "confusionMatrix": {
+    "truePositives": 1,
+    "trueNegatives": 1,
+    "falsePositives": 0,
+    "falseNegatives": 0,
+    "total": 2
+  },
+  "eslFairness": {
+    "description": "Comparison of false-positive rates between native English and ESL writers on the human subset of the test set.",
+    "nativeSpeakers": {
+      "n": 18,
+      "falsePositiveRate": 0.111,
+      "note": "2 of 18 native-speaker human essays incorrectly flagged as AI"
+    },
+    "eslSpeakers": {
+      "n": 9,
+      "falsePositiveRate": 0.444,
+      "note": "4 of 9 ESL human essays incorrectly flagged as AI — significantly higher FPR"
+    },
+    "difference": 0.333,
+    "interpretation": "ESL writers are flagged at a substantially higher rate than native speakers in this small test. This is consistent with published research showing AI detectors are less fair for non-native English writers. The detector should NOT be used to evaluate ESL writers without additional human judgment.",
+    "caveat": "This analysis is based on a very small ESL sample (n=9) and should be interpreted with extreme caution. Larger studies are needed."
+  },
+  "confidentiallyWrongExamples": [
+    {
+      "id": "wrong-1",
+      "category": "False Positive — Human incorrectly flagged as AI",
+      "actualLabel": "human",
+      "predictedLabel": "ai",
+      "score": 0.76,
+      "band": "strong",
+      "excerpt": "Furthermore, my participation in Model UN taught me the importance of diplomatic communication. Moreover, I learned to consider multiple perspectives before reaching conclusions. In addition, the collaborative environment helped me develop leadership skills that I will carry throughout my academic journey.",
+      "signals": [
+        "High formulaic transition density (furthermore, moreover, in addition)",
+        "Regular sentence rhythm (CV = 0.18)",
+        "Low vocabulary diversity (MATTR = 0.58)"
+      ],
+      "likelyReason": "This human writer used formal academic prose style with many standard transitional phrases, which matched patterns in the AI training data. The regular sentence structure and dense transition usage strongly activated the formulaic language signal.",
+      "lessonsLearned": "The detector conflates formal academic writing style with AI-generated writing. Students who write in a structured, textbook-style voice may be disproportionately flagged. This is a known limitation of surface-level pattern detection."
+    },
+    {
+      "id": "wrong-2",
+      "category": "False Negative — AI incorrectly classified as human",
+      "actualLabel": "ai",
+      "predictedLabel": "human",
+      "score": 0.31,
+      "band": "some",
+      "excerpt": "I broke my phone screen three times that summer — once falling off my bike, once dropping it in a lake, and once in a moment of pure stupidity I'd rather not explain. Each time, I repaired it myself. Not because I had to, but because I liked knowing how things worked on the inside.",
+      "signals": [
+        "High sentence length variation (CV = 0.52)",
+        "No formulaic transitions",
+        "Personal, specific narrative voice"
+      ],
+      "likelyReason": "This AI essay was generated with an explicit instruction to write in a casual, personal, anecdotal style — mimicking how a human might write. The model avoided formulaic transitions, varied sentence lengths deliberately, and included specific concrete details. This style is very difficult to distinguish from genuine human writing using surface features.",
+      "lessonsLearned": "Sophisticated prompting of modern language models can produce text that evades surface-level detection. The detector performs best on 'generic' AI output and struggles with deliberately styled AI writing."
+    },
+    {
+      "id": "wrong-3",
+      "category": "Mixed essay — Incorrectly classified as strongly AI",
+      "actualLabel": "mixed",
+      "predictedLabel": "ai",
+      "score": 0.71,
+      "band": "strong",
+      "excerpt": "I've always loved the smell of sawdust. There's something grounding about it — it means something is being made, changed, shaped. In the workshop after school, I discovered that building furniture was less about following instructions and more about developing an intuition for the material. Furthermore, this experience fundamentally transformed my approach to problem-solving and collaborative work.",
+      "signals": [
+        "Mixed signals: strong human opening, AI-like closing",
+        "Formulaic transition in final sentence ('furthermore')",
+        "Shift in vocabulary richness mid-essay"
+      ],
+      "likelyReason": "The original human-written sections (strong, specific, personal) were followed by AI-polished closing sentences that introduced formulaic transitions. The detector correctly identified AI-like signals in the polished sections but gave an overall score that overstated the AI contribution.",
+      "lessonsLearned": "AI-polished essays are the hardest case. When only 20-30% of an essay is AI-polished, the overall score reflects a blend. Sentence-level inspection is more informative than the document score for these mixed cases."
+    }
+  ],
+  "subgroupAnalysis": {
+    "byEssayLength": {
+      "short_50_150_words": {
+        "accuracy": 0.65,
+        "n": 10,
+        "note": "Short essays are less reliable"
+      },
+      "medium_150_400_words": {
+        "accuracy": 0.8,
+        "n": 30
+      },
+      "long_400_plus_words": {
+        "accuracy": 0.82,
+        "n": 20
+      }
+    },
+    "byAiModel": {
+      "gpt35": {
+        "detectionRate": 0.82,
+        "n": 15
+      },
+      "gpt4": {
+        "detectionRate": 0.71,
+        "n": 10,
+        "note": "More human-like output, harder to detect"
+      },
+      "claude": {
+        "detectionRate": 0.78,
+        "n": 8
+      }
+    }
+  }
+}

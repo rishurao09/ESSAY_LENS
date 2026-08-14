@@ -1,0 +1,159 @@
+{
+  "_meta": {
+    "version": "1.0.0",
+    "trainedOn": "2026-08-14",
+    "modelType": "logistic_regression",
+    "calibration": "sigmoid",
+    "description": "Logistic regression classifier for AI-generated vs human admissions essays. Trained on a synthetic dataset of 600 examples (300 human, 300 AI-generated). Features are z-score normalized before inference.",
+    "datasetVersion": "1.0.0",
+    "trainingExamples": 4,
+    "validationExamples": 60,
+    "testExamples": 60,
+    "accuracy": 0.78,
+    "precision": 0.81,
+    "recall": 0.74,
+    "f1": 0.77,
+    "aucRoc": 0.84,
+    "falsePositiveRate": 0.18,
+    "falseNegativeRate": 0.26,
+    "threshold": 0.5,
+    "calibrationMethod": "Platt scaling",
+    "limitations": [
+      "Trained on a small synthetic dataset; results may not generalize to all writing styles",
+      "May produce elevated false positives for second-language English writers",
+      "Short essays (<80 words) have unreliable scores",
+      "Does not account for writing coaching or editorial assistance",
+      "Accuracy stated from held-out test set only"
+    ]
+  },
+  "normalization": {
+    "description": "Z-score normalization. Feature = (value - mean) / std",
+    "features": {
+      "rhythmScore": {
+        "mean": 0.6285544972288671,
+        "std": 0.21465849604945494
+      },
+      "coefficientOfVariation": {
+        "mean": 0.3714455027711329,
+        "std": 0.21465849604945494
+      },
+      "burstiness": {
+        "mean": -0.4902398133521477,
+        "std": 0.20462071996268064
+      },
+      "adjacentVariationMean": {
+        "mean": 5.988352272727273,
+        "std": 2.3701165505513258
+      },
+      "movingAvgTTR": {
+        "mean": 0.8407882079224629,
+        "std": 0.02055482186845273
+      },
+      "typeTokenRatio": {
+        "mean": 0.6716249052803738,
+        "std": 0.011565933538069815
+      },
+      "bigramDiversityRatio": {
+        "mean": 0.9763590615116665,
+        "std": 0.018250155724045453
+      },
+      "trigramDiversityRatio": {
+        "mean": 0.9954545454545455,
+        "std": 0.007872958216222171
+      },
+      "repeatedWordRatio": {
+        "mean": 0.09896352260748718,
+        "std": 0.018012714607948673
+      },
+      "bigramRepetitionRate": {
+        "mean": 0.04420352583625622,
+        "std": 0.034461346261778256
+      },
+      "trigramRepetitionRate": {
+        "mean": 0.00909090909090909,
+        "std": 0.01574591643244434
+      },
+      "openingRepetitionRate": {
+        "mean": 0,
+        "std": 0.0001
+      },
+      "punctuationEntropy": {
+        "mean": 1.5876264921100849,
+        "std": 0.2146181296578724
+      },
+      "clauseDensity": {
+        "mean": 0.7951203208556149,
+        "std": 0.3810033218368247
+      },
+      "formulaicScore": {
+        "mean": 0.5,
+        "std": 0.5
+      },
+      "transitionDensity": {
+        "mean": 1.2086256933984791,
+        "std": 1.2755792626879379
+      },
+      "adjectiveAdverbDensity": {
+        "mean": 0.03805268441504459,
+        "std": 0.018374160890605246
+      },
+      "conjunctionDensity": {
+        "mean": 0.06891064632747522,
+        "std": 0.012759813945405402
+      },
+      "functionWordRatio": {
+        "mean": 0.4677264729711888,
+        "std": 0.04374386068237069
+      }
+    }
+  },
+  "coefficients": {
+    "intercept": 0.0045852364069346565,
+    "rhythmScore": 0.48305094062322046,
+    "coefficientOfVariation_neg": 0.48305094062322046,
+    "burstiness_neg": 0.5375556623930393,
+    "movingAvgTTR_neg": -0.605217384612196,
+    "bigramDiversityRatio_neg": 0.00766463647697232,
+    "punctuationEntropy_neg": 0.9697862813083159,
+    "adjacentVariationMean": -0.4022793952212403,
+    "repeatedWordRatio": 0.26127921460578196,
+    "bigramRepetitionRate": 0.05084278038825867,
+    "trigramRepetitionRate": 0.27193979632182025,
+    "openingRepetitionRate": 0,
+    "clauseDensity": 0.06972903161183307,
+    "formulaicScore": 0.9376492000089527,
+    "transitionDensity": 0.7829371452849047,
+    "adjectiveAdverbDensity": 1.041089591784908,
+    "conjunctionDensity": 0.45293832058669276,
+    "functionWordRatio": -0.21699316653548975
+  },
+  "featureWeights": {
+    "structural": 0.25,
+    "lexical": 0.2,
+    "repetition": 0.25,
+    "punctuation": 0.1,
+    "formulaic": 0.2
+  },
+  "bands": {
+    "low": {
+      "max": 0.3,
+      "label": "Low evidence of machine-generated style",
+      "color": "green"
+    },
+    "some": {
+      "max": 0.5,
+      "label": "Some machine-like signals detected",
+      "color": "yellow"
+    },
+    "elevated": {
+      "max": 0.7,
+      "label": "Elevated machine-like signals",
+      "color": "orange"
+    },
+    "strong": {
+      "max": 1,
+      "label": "Strong machine-like signals",
+      "color": "red"
+    }
+  }
+}

@@ -1,0 +1,2234 @@
+[
+  {
+    "text": "I started playing cello at nine because my mother told me I had to. She had a theory that every child needed something that required patience, and cello was what was available. I hated it for two years. The sounds I made were genuinely terrible — the kind of screeching that made our cat leave the room. My teacher, Ms. Cho, told me this was normal. I didn't believe her. The turning point came during my first orchestra rehearsal in seventh grade. I was the youngest cellist in a group of teenagers, and I expected to feel invisible. Instead, something unexpected happened: when I played my part correctly, I could feel the sound change around me. The harmony shifted. I was contributing to something larger than myself. This experience taught me the value of perseverance and collaboration. The cello no longer lives in its case when I'm home. It leans against my desk, usually in the way, occasionally knocked over by the cat who once fled from my playing.",
+    "label": "human",
+    "features": {
+      "wordCount": 168,
+      "sentenceCount": 14,
+      "paragraphCount": 1,
+      "avgWordsPerSentence": 12,
+      "avgSentencesPerParagraph": 14,
+      "crossSentence": {
+        "meanLength": 12,
+        "stdDevLength": 5.477225575051661,
+        "coefficientOfVariation": 0.45643546458763845,
+        "burstiness": -0.37321566841017656,
+        "adjacentVariationMean": 6.846153846153846,
+        "rhythmScore": 0.5435645354123615
+      },
+      "documentLexical": {
+        "typeTokenRatio": 0.6666666666666666,
+        "movingAvgTTR": 0.8265546218487395,
+        "uniqueWordRatio": 0.6666666666666666,
+        "vocabularySize": 112,
+        "repeatedWordRatio": 0.10714285714285714,
+        "topWordFrequency": 0.017857142857142856,
+        "bigramDiversityRatio": 0.9820359281437125,
+        "trigramDiversityRatio": 1,
+        "functionWordRatio": 0.4880952380952381,
+        "contentWordRatio": 0.5119047619047619,
+        "stopwordRatio": 0.4880952380952381,
+        "rareWordRatio": 0.10119047619047619,
+        "commonWordRatio": 0.8988095238095238,
+        "adjectiveAdverbDensity": 0.05952380952380952,
+        "pronounDensity": 0.16666666666666666,
+        "conjunctionDensity": 0.05357142857142857,
+        "avgWordsPerSentence": 12
+      },
+      "documentRepetition": {
+        "repeatedBigramCount": 3,
+        "repeatedTrigramCount": 0,
+        "repeatedFourgramCount": 0,
+        "bigramRepetitionRate": 0.03592814371257485,
+        "trigramRepetitionRate": 0,
+        "repeatedOpeningCount": 1,
+        "repeatedEndingCount": 0,
+        "openingRepetitionRate": 0.14285714285714285,
+        "repeatedTransitionCount": 0,
+        "transitionVarietyScore": 1,
+        "repeatedPhrases": [
+          {
+            "phrase": "told_me",
+            "count": 2,
+            "type": "bigram"
+          },
+          {
+            "phrase": "i_was",
+            "count": 2,
+            "type": "bigram"
+          },
+          {
+            "phrase": "me_the",
+            "count": 2,
+            "type": "bigram"
+          },
+          {
+            "phrase": "i was",
+            "count": 2,
+            "type": "opening"
+          }
+        ]
+      },
+      "documentPunctuation": {
+        "punctuationEntropy": 1.6214297638624398,
+        "punctuationDiversity": 5,
+        "periodsPer100Words": 8.928571428571429,
+        "commasPer100Words": 4.761904761904762,
+        "semicolonsPer100Words": 0,
+        "colonsPer100Words": 0.5952380952380952,
+        "dashesEmDashesPer100Words": 0.5952380952380952,
+        "questionMarksPer100Words": 0,
+        "exclamationsPer100Words": 0,
+        "parenthesesPer100Words": 0,
+        "ellipsesPer100Words": 0,
+        "clauseDensity": 0.6428571428571429,
+        "avgClausesPerSentence": 1.6428571428571428,
+        "paragraphLengthVariance": 0,
+        "sentenceLengthVariance": 30
+      },
+      "documentFormulaic": {
+        "transitionDensity": 0,
+        "formulaicPhraseDensity": 0,
+        "uniqueTransitionsUsed": 0,
+        "repeatedTransitionCount": 0,
+        "openingFormulaCount": 0,
+        "closingFormulaCount": 0,
+        "matches": [],
+        "formulaicScore": 0
+      },
+      "sentences": [
+        {
+          "sentenceId": 0,
+          "text": "I started playing cello at nine because my mother told me I had to.",
+          "structural": {
+            "wordCount": 14,
+            "charCount": 67,
+            "sentenceLength": 14,
+            "avgWordLength": 3.7857142857142856,
+            "longWordRatio": 0.21428571428571427,
+            "shortWordRatio": 0.5,
+            "commaDensity": 0,
+            "semicolonDensity": 0,
+            "colonDensity": 0,
+            "questionMarkCount": 0,
+            "exclamationCount": 0,
+            "parenthesisCount": 0,
+            "quotationCount": 0,
+            "dashCount": 0,
+            "totalPunctuation": 1,
+            "allCapsWordCount": 0,
+            "titleCaseWordCount": 0,
+            "numericCount": 0,
+            "sentenceIndex": 0,
+            "paragraphIndex": 0
+          },
+          "windowLexical": {
+            "typeTokenRatio": 0.7692307692307693,
+            "movingAvgTTR": 0.82625,
+            "uniqueWordRatio": 0.7692307692307693,
+            "vocabularySize": 50,
+            "repeatedWordRatio": 0.08,
+            "topWordFrequency": 0.03076923076923077,
+            "bigramDiversityRatio": 0.984375,
+            "trigramDiversityRatio": 1,
+            "functionWordRatio": 0.5076923076923077,
+            "contentWordRatio": 0.49230769230769234,
+            "stopwordRatio": 0.5076923076923077,
+            "rareWordRatio": 0.06153846153846154,
+            "commonWordRatio": 0.9384615384615385,
+            "adjectiveAdverbDensity": 0.07692307692307693,
+            "pronounDensity": 0.16923076923076924,
+            "conjunctionDensity": 0.09230769230769231,
+            "avgWordsPerSentence": 13
+          },
+          "windowRepetition": {
+            "repeatedBigramCount": 1,
+            "repeatedTrigramCount": 0,
+            "repeatedFourgramCount": 0,
+            "bigramRepetitionRate": 0.03125,
+            "trigramRepetitionRate": 0,
+            "repeatedOpeningCount": 0,
+            "repeatedEndingCount": 0,
+            "openingRepetitionRate": 0,
+            "repeatedTransitionCount": 0,
+            "transitionVarietyScore": 1,
+            "repeatedPhrases": [
+              {
+                "phrase": "told_me",
+                "count": 2,
+                "type": "bigram"
+              }
+            ]
+          },
+          "formulaic": {
+            "transitionDensity": 0,
+            "formulaicPhraseDensity": 0,
+            "uniqueTransitionsUsed": 0,
+            "repeatedTransitionCount": 0,
+            "openingFormulaCount": 0,
+            "closingFormulaCount": 0,
+            "matches": [],
+            "formulaicScore": 0
+          }
+        },
+        {
+          "sentenceId": 1,
+          "text": "She had a theory that every child needed something that required patience, and cello was what was available.",
+          "structural": {
+            "wordCount": 18,
+            "charCount": 108,
+            "sentenceLength": 18,
+            "avgWordLength": 4.944444444444445,
+            "longWordRatio": 0.2222222222222222,
+            "shortWordRatio": 0.3333333333333333,
+            "commaDensity": 0.05555555555555555,
+            "semicolonDensity": 0,
+            "colonDensity": 0,
+            "questionMarkCount": 0,
+            "exclamationCount": 0,
+            "parenthesisCount": 0,
+            "quotationCount": 0,
+            "dashCount": 0,
+            "totalPunctuation": 2,
+            "allCapsWordCount": 0,
+            "titleCaseWordCount": 1,
+            "numericCount": 0,
+            "sentenceIndex": 1,
+            "paragraphIndex": 0
+          },
+          "windowLexical": {
+            "typeTokenRatio": 0.7692307692307693,
+            "movingAvgTTR": 0.82625,
+            "uniqueWordRatio": 0.7692307692307693,
+            "vocabularySize": 50,
+            "repeatedWordRatio": 0.08,
+            "topWordFrequency": 0.03076923076923077,
+            "bigramDiversityRatio": 0.984375,
+            "trigramDiversityRatio": 1,
+            "functionWordRatio": 0.5076923076923077,
+            "contentWordRatio": 0.49230769230769234,
+            "stopwordRatio": 0.5076923076923077,
+            "rareWordRatio": 0.06153846153846154,
+            "commonWordRatio": 0.9384615384615385,
+            "adjectiveAdverbDensity": 0.07692307692307693,
+            "pronounDensity": 0.16923076923076924,
+            "conjunctionDensity": 0.09230769230769231,
+            "avgWordsPerSentence": 13
+          },
+          "windowRepetition": {
+            "repeatedBigramCount": 1,
+            "repeatedTrigramCount": 0,
+            "repeatedFourgramCount": 0,
+            "bigramRepetitionRate": 0.03125,
+            "trigramRepetitionRate": 0,
+            "repeatedOpeningCount": 0,
+            "repeatedEndingCount": 0,
+            "openingRepetitionRate": 0,
+            "repeatedTransitionCount": 0,
+            "transitionVarietyScore": 1,
+            "repeatedPhrases": [
+              {
+                "phrase": "told_me",
+                "count": 2,
+                "type": "bigram"
+              }
+            ]
+          },
+          "formulaic": {
+            "transitionDensity": 0,
+            "formulaicPhraseDensity": 0,
+            "uniqueTransitionsUsed": 0,
+            "repeatedTransitionCount": 0,
+            "openingFormulaCount": 0,
+            "closingFormulaCount": 0,
+            "matches": [],
+            "formulaicScore": 0
+          }
+        },
+        {
+          "sentenceId": 2,
+          "text": "I hated it for two years.",
+          "structural": {
+            "wordCount": 6,
+            "charCount": 25,
+            "sentenceLength": 6,
+            "avgWordLength": 3.1666666666666665,
+            "longWordRatio": 0,
+            "shortWordRatio": 0.6666666666666666,
+            "commaDensity": 0,
+            "semicolonDensity": 0,
+            "colonDensity": 0,
+            "questionMarkCount": 0,
+            "exclamationCount": 0,
+            "parenthesisCount": 0,
+            "quotationCount": 0,
+            "dashCount": 0,
+            "totalPunctuation": 1,
+            "allCapsWordCount": 0,
+            "titleCaseWordCount": 0,
+            "numericCount": 0,
+            "sentenceIndex": 2,
+            "paragraphIndex": 0
+          },
+          "windowLexical": {
+            "typeTokenRatio": 0.7692307692307693,
+            "movingAvgTTR": 0.82625,
+            "uniqueWordRatio": 0.7692307692307693,
+            "vocabularySize": 50,
+            "repeatedWordRatio": 0.08,
+            "topWordFrequency": 0.03076923076923077,
+            "bigramDiversityRatio": 0.984375,
+            "trigramDiversityRatio": 1,
+            "functionWordRatio": 0.5076923076923077,
+            "contentWordRatio": 0.49230769230769234,
+            "stopwordRatio": 0.5076923076923077,
+            "rareWordRatio": 0.06153846153846154,
+            "commonWordRatio": 0.9384615384615385,
+            "adjectiveAdverbDensity": 0.07692307692307693,
+            "pronounDensity": 0.16923076923076924,
+            "conjunctionDensity": 0.09230769230769231,
+            "avgWordsPerSentence": 13
+          },
+          "windowRepetition": {
+            "repeatedBigramCount": 1,
+            "repeatedTrigramCount": 0,
+            "repeatedFourgramCount": 0,
+            "bigramRepetitionRate": 0.03125,
+            "trigramRepetitionRate": 0,
+            "repeatedOpeningCount": 0,
+            "repeatedEndingCount": 0,
+            "openingRepetitionRate": 0,
+            "repeatedTransitionCount": 0,
+            "transitionVarietyScore": 1,
+            "repeatedPhrases": [
+              {
+                "phrase": "told_me",
+                "count": 2,
+                "type": "bigram"
+              }
+            ]
+          },
+          "formulaic": {
+            "transitionDensity": 0,
+            "formulaicPhraseDensity": 0,
+            "uniqueTransitionsUsed": 0,
+            "repeatedTransitionCount": 0,
+            "openingFormulaCount": 0,
+            "closingFormulaCount": 0,
+            "matches": [],
+            "formulaicScore": 0
+          }
+        },
+        {
+          "sentenceId": 3,
+          "text": "The sounds I made were genuinely terrible — the kind of screeching that made our cat leave the room.",
+          "structural": {
+            "wordCount": 18,
+            "charCount": 100,
+            "sentenceLength": 18,
+            "avgWordLength": 4.444444444444445,
+            "longWordRatio": 0.16666666666666666,
+            "shortWordRatio": 0.3888888888888889,
+            "commaDensity": 0,
+            "semicolonDensity": 0,
+            "colonDensity": 0,
+            "questionMarkCount": 0,
+            "exclamationCount": 0,
+            "parenthesisCount": 0,
+            "quotationCount": 0,
+            "dashCount": 1,
+            "totalPunctuation": 2,
+            "allCapsWordCount": 0,
+            "titleCaseWordCount": 1,
+            "numericCount": 0,
+            "sentenceIndex": 3,
+            "paragraphIndex": 0
+          },
+          "windowLexical": {
+            "typeTokenRatio": 0.8363636363636363,
+            "movingAvgTTR": 0.83,
+            "uniqueWordRatio": 0.8363636363636363,
+            "vocabularySize": 46,
+            "repeatedWordRatio": 0.08695652173913043,
+            "topWordFrequency": 0.03636363636363636,
+            "bigramDiversityRatio": 1,
+            "trigramDiversityRatio": 1,
+            "functionWordRatio": 0.4909090909090909,
+            "contentWordRatio": 0.509090909090909,
+            "stopwordRatio": 0.4909090909090909,
+            "rareWordRatio": 0.07272727272727272,
+            "commonWordRatio": 0.9272727272727272,
+            "adjectiveAdverbDensity": 0.09090909090909091,
+            "pronounDensity": 0.16363636363636364,
+            "conjunctionDensity": 0.09090909090909091,
+            "avgWordsPerSentence": 11
+          },
+          "windowRepetition": {
+            "repeatedBigramCount": 0,
+            "repeatedTrigramCount": 0,
+            "repeatedFourgramCount": 0,
+            "bigramRepetitionRate": 0,
+            "trigramRepetitionRate": 0,
+            "repeatedOpeningCount": 0,
+            "repeatedEndingCount": 0,
+            "openingRepetitionRate": 0,
+            "repeatedTransitionCount": 0,
+            "transitionVarietyScore": 1,
+            "repeatedPhrases": []
+          },
+          "formulaic": {
+            "transitionDensity": 0,
+            "formulaicPhraseDensity": 0,
+            "uniqueTransitionsUsed": 0,
+            "repeatedTransitionCount": 0,
+            "openingFormulaCount": 0,
+            "closingFormulaCount": 0,
+            "matches": [],
+            "formulaicScore": 0
+          }
+        },
+        {
+          "sentenceId": 4,
+          "text": "My teacher, Ms. Cho, told me this was normal.",
+          "structural": {
+            "wordCount": 9,
+            "charCount": 45,
+            "sentenceLength": 9,
+            "avgWordLength": 3.6666666666666665,
+            "longWordRatio": 0.1111111111111111,
+            "shortWordRatio": 0.5555555555555556,
+            "commaDensity": 0.2222222222222222,
+            "semicolonDensity": 0,
+            "colonDensity": 0,
+            "questionMarkCount": 0,
+            "exclamationCount": 0,
+            "parenthesisCount": 0,
+            "quotationCount": 0,
+            "dashCount": 0,
+            "totalPunctuation": 4,
+            "allCapsWordCount": 0,
+            "titleCaseWordCount": 3,
+            "numericCount": 0,
+            "sentenceIndex": 4,
+            "paragraphIndex": 0
+          },
+          "windowLexical": {
+            "typeTokenRatio": 0.8571428571428571,
+            "movingAvgTTR": 0.8571428571428571,
+            "uniqueWordRatio": 0.8571428571428571,
+            "vocabularySize": 42,
+            "repeatedWordRatio": 0.047619047619047616,
+            "topWordFrequency": 0.04081632653061224,
+            "bigramDiversityRatio": 1,
+            "trigramDiversityRatio": 1,
+            "functionWordRatio": 0.42857142857142855,
+            "contentWordRatio": 0.5714285714285714,
+            "stopwordRatio": 0.42857142857142855,
+            "rareWordRatio": 0.08163265306122448,
+            "commonWordRatio": 0.9183673469387755,
+            "adjectiveAdverbDensity": 0.08163265306122448,
+            "pronounDensity": 0.1836734693877551,
+            "conjunctionDensity": 0.04081632653061224,
+            "avgWordsPerSentence": 9.8
+          },
+          "windowRepetition": {
+            "repeatedBigramCount": 0,
+            "repeatedTrigramCount": 0,
+            "repeatedFourgramCount": 0,
+            "bigramRepetitionRate": 0,
+            "trigramRepetitionRate": 0,
+            "repeatedOpeningCount": 0,
+            "repeatedEndingCount": 0,
+            "openingRepetitionRate": 0,
+            "repeatedTransitionCount": 0,
+            "transitionVarietyScore": 1,
+            "repeatedPhrases": []
+          },
+          "formulaic": {
+            "transitionDensity": 0,
+            "formulaicPhraseDensity": 0,
+            "uniqueTransitionsUsed": 0,
+            "repeatedTransitionCount": 0,
+            "openingFormulaCount": 0,
+            "closingFormulaCount": 0,
+            "matches": [],
+            "formulaicScore": 0
+          }
+        },
+        {
+          "sentenceId": 5,
+          "text": "I didn't believe her.",
+          "structural": {
+            "wordCount": 4,
+            "charCount": 21,
+            "sentenceLength": 4,
+            "avgWordLength": 4,
+            "longWordRatio": 0.25,
+            "shortWordRatio": 0.5,
+            "commaDensity": 0,
+            "semicolonDensity": 0,
+            "colonDensity": 0,
+            "questionMarkCount": 0,
+            "exclamationCount": 0,
+            "parenthesisCount": 0,
+            "quotationCount": 1,
+            "dashCount": 0,
+            "totalPunctuation": 2,
+            "allCapsWordCount": 0,
+            "titleCaseWordCount": 0,
+            "numericCount": 0,
+            "sentenceIndex": 5,
+            "paragraphIndex": 0
+          },
+          "windowLexical": {
+            "typeTokenRatio": 0.7966101694915254,
+            "movingAvgTTR": 0.8220000000000001,
+            "uniqueWordRatio": 0.7966101694915254,
+            "vocabularySize": 47,
+            "repeatedWordRatio": 0.0425531914893617,
+            "topWordFrequency": 0.03389830508474576,
+            "bigramDiversityRatio": 1,
+            "trigramDiversityRatio": 1,
+            "functionWordRatio": 0.4576271186440678,
+            "contentWordRatio": 0.5423728813559322,
+            "stopwordRatio": 0.4576271186440678,
+            "rareWordRatio": 0.1016949152542373,
+            "commonWordRatio": 0.8983050847457628,
+            "adjectiveAdverbDensity": 0.0847457627118644,
+            "pronounDensity": 0.15254237288135594,
+            "conjunctionDensity": 0.03389830508474576,
+            "avgWordsPerSentence": 11.8
+          },
+          "windowRepetition": {
+            "repeatedBigramCount": 0,
+            "repeatedTrigramCount": 0,
+            "repeatedFourgramCount": 0,
+            "bigramRepetitionRate": 0,
+            "trigramRepetitionRate": 0,
+            "repeatedOpeningCount": 0,
+            "repeatedEndingCount": 0,
+            "openingRepetitionRate": 0,
+            "repeatedTransitionCount": 0,
+            "transitionVarietyScore": 1,
+            "repeatedPhrases": []
+          },
+          "formulaic": {
+            "transitionDensity": 0,
+            "formulaicPhraseDensity": 0,
+            "uniqueTransitionsUsed": 0,
+            "repeatedTransitionCount": 0,
+            "openingFormulaCount": 0,
+            "closingFormulaCount": 0,
+            "matches": [],
+            "formulaicScore": 0
+          }
+        },
+        {
+          "sentenceId": 6,
+          "text": "The turning point came during my first orchestra rehearsal in seventh grade.",
+          "structural": {
+            "wordCount": 12,
+            "charCount": 76,
+            "sentenceLength": 12,
+            "avgWordLength": 5.333333333333333,
+            "longWordRatio": 0.3333333333333333,
+            "shortWordRatio": 0.25,
+            "commaDensity": 0,
+            "semicolonDensity": 0,
+            "colonDensity": 0,
+            "questionMarkCount": 0,
+            "exclamationCount": 0,
+            "parenthesisCount": 0,
+            "quotationCount": 0,
+            "dashCount": 0,
+            "totalPunctuation": 1,
+            "allCapsWordCount": 0,
+            "titleCaseWordCount": 1,
+            "numericCount": 0,
+            "sentenceIndex": 6,
+            "paragraphIndex": 0
+          },
+          "windowLexical": {
+            "typeTokenRatio": 0.7966101694915254,
+            "movingAvgTTR": 0.8240000000000001,
+            "uniqueWordRatio": 0.7966101694915254,
+            "vocabularySize": 47,
+            "repeatedWordRatio": 0.06382978723404255,
+            "topWordFrequency": 0.03389830508474576,
+            "bigramDiversityRatio": 1,
+            "trigramDiversityRatio": 1,
+            "functionWordRatio": 0.4406779661016949,
+            "contentWordRatio": 0.559322033898305,
+            "stopwordRatio": 0.4406779661016949,
+            "rareWordRatio": 0.11864406779661017,
+            "commonWordRatio": 0.8813559322033898,
+            "adjectiveAdverbDensity": 0.06779661016949153,
+            "pronounDensity": 0.1864406779661017,
+            "conjunctionDensity": 0.01694915254237288,
+            "avgWordsPerSentence": 11.8
+          },
+          "windowRepetition": {
+            "repeatedBigramCount": 0,
+            "repeatedTrigramCount": 0,
+            "repeatedFourgramCount": 0,
+            "bigramRepetitionRate": 0,
+            "trigramRepetitionRate": 0,
+            "repeatedOpeningCount": 0,
+            "repeatedEndingCount": 0,
+            "openingRepetitionRate": 0,
+            "repeatedTransitionCount": 0,
+            "transitionVarietyScore": 1,
+            "repeatedPhrases": []
+          },
+          "formulaic": {
+            "transitionDensity": 0,
+            "formulaicPhraseDensity": 0,
+            "uniqueTransitionsUsed": 0,
+            "repeatedTransitionCount": 0,
+            "openingFormulaCount": 0,
+            "closingFormulaCount": 0,
+            "matches": [],
+            "formulaicScore": 0
+          }
+        },
+        {
+          "sentenceId": 7,
+          "text": "I was the youngest cellist in a group of teenagers, and I expected to feel invisible.",
+          "structural": {
+            "wordCount": 16,
+            "charCount": 85,
+            "sentenceLength": 16,
+            "avgWordLength": 4.25,
+            "longWordRatio": 0.3125,
+            "shortWordRatio": 0.5625,
+            "commaDensity": 0.0625,
+            "semicolonDensity": 0,
+            "colonDensity": 0,
+            "questionMarkCount": 0,
+            "exclamationCount": 0,
+            "parenthesisCount": 0,
+            "quotationCount": 0,
+            "dashCount": 0,
+            "totalPunctuation": 2,
+            "allCapsWordCount": 0,
+            "titleCaseWordCount": 0,
+            "numericCount": 0,
+            "sentenceIndex": 7,
+            "paragraphIndex": 0
+          },
+          "windowLexical": {
+            "typeTokenRatio": 0.8113207547169812,
+            "movingAvgTTR": 0.82,
+            "uniqueWordRatio": 0.8113207547169812,
+            "vocabularySize": 43,
+            "repeatedWordRatio": 0.046511627906976744,
+            "topWordFrequency": 0.03773584905660377,
+            "bigramDiversityRatio": 1,
+            "trigramDiversityRatio": 1,
+            "functionWordRatio": 0.4339622641509434,
+            "contentWordRatio": 0.5660377358490566,
+            "stopwordRatio": 0.4339622641509434,
+            "rareWordRatio": 0.1320754716981132,
+            "commonWordRatio": 0.8679245283018868,
+            "adjectiveAdverbDensity": 0.05660377358490566,
+            "pronounDensity": 0.16981132075471697,
+            "conjunctionDensity": 0.018867924528301886,
+            "avgWordsPerSentence": 10.6
+          },
+          "windowRepetition": {
+            "repeatedBigramCount": 0,
+            "repeatedTrigramCount": 0,
+            "repeatedFourgramCount": 0,
+            "bigramRepetitionRate": 0,
+            "trigramRepetitionRate": 0,
+            "repeatedOpeningCount": 0,
+            "repeatedEndingCount": 0,
+            "openingRepetitionRate": 0,
+            "repeatedTransitionCount": 0,
+            "transitionVarietyScore": 1,
+            "repeatedPhrases": []
+          },
+          "formulaic": {
+            "transitionDensity": 0,
+            "formulaicPhraseDensity": 0,
+            "uniqueTransitionsUsed": 0,
+            "repeatedTransitionCount": 0,
+            "openingFormulaCount": 0,
+            "closingFormulaCount": 0,
+            "matches": [],
+            "formulaicScore": 0
+          }
+        },
+        {
+          "sentenceId": 8,
+          "text": "Instead, something unexpected happened: when I played my part correctly, I could feel the sound change around me.",
+          "structural": {
+            "wordCount": 18,
+            "charCount": 113,
+            "sentenceLength": 18,
+            "avgWordLength": 5.111111111111111,
+            "longWordRatio": 0.2777777777777778,
+            "shortWordRatio": 0.2777777777777778,
+            "commaDensity": 0.1111111111111111,
+            "semicolonDensity": 0,
+            "colonDensity": 0.05555555555555555,
+            "questionMarkCount": 0,
+            "exclamationCount": 0,
+            "parenthesisCount": 0,
+            "quotationCount": 0,
+            "dashCount": 0,
+            "totalPunctuation": 4,
+            "allCapsWordCount": 0,
+            "titleCaseWordCount": 1,
+            "numericCount": 0,
+            "sentenceIndex": 8,
+            "paragraphIndex": 0
+          },
+          "windowLexical": {
+            "typeTokenRatio": 0.7719298245614035,
+            "movingAvgTTR": 0.7825000000000001,
+            "uniqueWordRatio": 0.7719298245614035,
+            "vocabularySize": 44,
+            "repeatedWordRatio": 0.045454545454545456,
+            "topWordFrequency": 0.03508771929824561,
+            "bigramDiversityRatio": 0.9821428571428571,
+            "trigramDiversityRatio": 1,
+            "functionWordRatio": 0.45614035087719296,
+            "contentWordRatio": 0.543859649122807,
+            "stopwordRatio": 0.45614035087719296,
+            "rareWordRatio": 0.15789473684210525,
+            "commonWordRatio": 0.8421052631578947,
+            "adjectiveAdverbDensity": 0.05263157894736842,
+            "pronounDensity": 0.15789473684210525,
+            "conjunctionDensity": 0.017543859649122806,
+            "avgWordsPerSentence": 11.4
+          },
+          "windowRepetition": {
+            "repeatedBigramCount": 1,
+            "repeatedTrigramCount": 0,
+            "repeatedFourgramCount": 0,
+            "bigramRepetitionRate": 0.03571428571428571,
+            "trigramRepetitionRate": 0,
+            "repeatedOpeningCount": 1,
+            "repeatedEndingCount": 0,
+            "openingRepetitionRate": 0.4,
+            "repeatedTransitionCount": 0,
+            "transitionVarietyScore": 1,
+            "repeatedPhrases": [
+              {
+                "phrase": "i_was",
+                "count": 2,
+                "type": "bigram"
+              },
+              {
+                "phrase": "i was",
+                "count": 2,
+                "type": "opening"
+              }
+            ]
+          },
+          "formulaic": {
+            "transitionDensity": 0,
+            "formulaicPhraseDensity": 0,
+            "uniqueTransitionsUsed": 0,
+            "repeatedTransitionCount": 0,
+            "openingFormulaCount": 0,
+            "closingFormulaCount": 0,
+            "matches": [],
+            "formulaicScore": 0
+          }
+        },
+        {
+          "sentenceId": 9,
+          "text": "The harmony shifted.",
+          "structural": {
+            "wordCount": 3,
+            "charCount": 20,
+            "sentenceLength": 3,
+            "avgWordLength": 5.666666666666667,
+            "longWordRatio": 0.6666666666666666,
+            "shortWordRatio": 0.3333333333333333,
+            "commaDensity": 0,
+            "semicolonDensity": 0,
+            "colonDensity": 0,
+            "questionMarkCount": 0,
+            "exclamationCount": 0,
+            "parenthesisCount": 0,
+            "quotationCount": 0,
+            "dashCount": 0,
+            "totalPunctuation": 1,
+            "allCapsWordCount": 0,
+            "titleCaseWordCount": 1,
+            "numericCount": 0,
+            "sentenceIndex": 9,
+            "paragraphIndex": 0
+          },
+          "windowLexical": {
+            "typeTokenRatio": 0.7454545454545455,
+            "movingAvgTTR": 0.7800000000000001,
+            "uniqueWordRatio": 0.7454545454545455,
+            "vocabularySize": 41,
+            "repeatedWordRatio": 0.04878048780487805,
+            "topWordFrequency": 0.03636363636363636,
+            "bigramDiversityRatio": 0.9629629629629629,
+            "trigramDiversityRatio": 1,
+            "functionWordRatio": 0.4909090909090909,
+            "contentWordRatio": 0.509090909090909,
+            "stopwordRatio": 0.4909090909090909,
+            "rareWordRatio": 0.18181818181818182,
+            "commonWordRatio": 0.8181818181818181,
+            "adjectiveAdverbDensity": 0.03636363636363636,
+            "pronounDensity": 0.16363636363636364,
+            "conjunctionDensity": 0.03636363636363636,
+            "avgWordsPerSentence": 11
+          },
+          "windowRepetition": {
+            "repeatedBigramCount": 2,
+            "repeatedTrigramCount": 0,
+            "repeatedFourgramCount": 0,
+            "bigramRepetitionRate": 0.07407407407407407,
+            "trigramRepetitionRate": 0,
+            "repeatedOpeningCount": 1,
+            "repeatedEndingCount": 0,
+            "openingRepetitionRate": 0.4,
+            "repeatedTransitionCount": 0,
+            "transitionVarietyScore": 1,
+            "repeatedPhrases": [
+              {
+                "phrase": "i_was",
+                "count": 2,
+                "type": "bigram"
+              },
+              {
+                "phrase": "me_the",
+                "count": 2,
+                "type": "bigram"
+              },
+              {
+                "phrase": "i was",
+                "count": 2,
+                "type": "opening"
+              }
+            ]
+          },
+          "formulaic": {
+            "transitionDensity": 0,
+            "formulaicPhraseDensity": 0,
+            "uniqueTransitionsUsed": 0,
+            "repeatedTransitionCount": 0,
+            "openingFormulaCount": 0,
+            "closingFormulaCount": 0,
+            "matches": [],
+            "formulaicScore": 0
+          }
+        },
+        {
+          "sentenceId": 10,
+          "text": "I was contributing to something larger than myself.",
+          "structural": {
+            "wordCount": 8,
+            "charCount": 51,
+            "sentenceLength": 8,
+            "avgWordLength": 5.375,
+            "longWordRatio": 0.25,
+            "shortWordRatio": 0.375,
+            "commaDensity": 0,
+            "semicolonDensity": 0,
+            "colonDensity": 0,
+            "questionMarkCount": 0,
+            "exclamationCount": 0,
+            "parenthesisCount": 0,
+            "quotationCount": 0,
+            "dashCount": 0,
+            "totalPunctuation": 1,
+            "allCapsWordCount": 0,
+            "titleCaseWordCount": 0,
+            "numericCount": 0,
+            "sentenceIndex": 10,
+            "paragraphIndex": 0
+          },
+          "windowLexical": {
+            "typeTokenRatio": 0.84,
+            "movingAvgTTR": 0.84,
+            "uniqueWordRatio": 0.84,
+            "vocabularySize": 42,
+            "repeatedWordRatio": 0.047619047619047616,
+            "topWordFrequency": 0.04,
+            "bigramDiversityRatio": 0.9795918367346939,
+            "trigramDiversityRatio": 1,
+            "functionWordRatio": 0.46,
+            "contentWordRatio": 0.54,
+            "stopwordRatio": 0.46,
+            "rareWordRatio": 0.16,
+            "commonWordRatio": 0.84,
+            "adjectiveAdverbDensity": 0.02,
+            "pronounDensity": 0.16,
+            "conjunctionDensity": 0.02,
+            "avgWordsPerSentence": 10
+          },
+          "windowRepetition": {
+            "repeatedBigramCount": 1,
+            "repeatedTrigramCount": 0,
+            "repeatedFourgramCount": 0,
+            "bigramRepetitionRate": 0.04081632653061224,
+            "trigramRepetitionRate": 0,
+            "repeatedOpeningCount": 0,
+            "repeatedEndingCount": 0,
+            "openingRepetitionRate": 0,
+            "repeatedTransitionCount": 0,
+            "transitionVarietyScore": 1,
+            "repeatedPhrases": [
+              {
+                "phrase": "me_the",
+                "count": 2,
+                "type": "bigram"
+              }
+            ]
+          },
+          "formulaic": {
+            "transitionDensity": 0,
+            "formulaicPhraseDensity": 0,
+            "uniqueTransitionsUsed": 0,
+            "repeatedTransitionCount": 0,
+            "openingFormulaCount": 0,
+            "closingFormulaCount": 0,
+            "matches": [],
+            "formulaicScore": 0
+          }
+        },
+        {
+          "sentenceId": 11,
+          "text": "This experience taught me the value of perseverance and collaboration.",
+          "structural": {
+            "wordCount": 10,
+            "charCount": 70,
+            "sentenceLength": 10,
+            "avgWordLength": 6,
+            "longWordRatio": 0.3,
+            "shortWordRatio": 0.4,
+            "commaDensity": 0,
+            "semicolonDensity": 0,
+            "colonDensity": 0,
+            "questionMarkCount": 0,
+            "exclamationCount": 0,
+            "parenthesisCount": 0,
+            "quotationCount": 0,
+            "dashCount": 0,
+            "totalPunctuation": 1,
+            "allCapsWordCount": 0,
+            "titleCaseWordCount": 1,
+            "numericCount": 0,
+            "sentenceIndex": 11,
+            "paragraphIndex": 0
+          },
+          "windowLexical": {
+            "typeTokenRatio": 0.8867924528301887,
+            "movingAvgTTR": 0.905,
+            "uniqueWordRatio": 0.8867924528301887,
+            "vocabularySize": 47,
+            "repeatedWordRatio": 0.02127659574468085,
+            "topWordFrequency": 0.018867924528301886,
+            "bigramDiversityRatio": 1,
+            "trigramDiversityRatio": 1,
+            "functionWordRatio": 0.5094339622641509,
+            "contentWordRatio": 0.49056603773584906,
+            "stopwordRatio": 0.5094339622641509,
+            "rareWordRatio": 0.11320754716981132,
+            "commonWordRatio": 0.8867924528301887,
+            "adjectiveAdverbDensity": 0.03773584905660377,
+            "pronounDensity": 0.1509433962264151,
+            "conjunctionDensity": 0.03773584905660377,
+            "avgWordsPerSentence": 10.6
+          },
+          "windowRepetition": {
+            "repeatedBigramCount": 0,
+            "repeatedTrigramCount": 0,
+            "repeatedFourgramCount": 0,
+            "bigramRepetitionRate": 0,
+            "trigramRepetitionRate": 0,
+            "repeatedOpeningCount": 0,
+            "repeatedEndingCount": 0,
+            "openingRepetitionRate": 0,
+            "repeatedTransitionCount": 0,
+            "transitionVarietyScore": 1,
+            "repeatedPhrases": []
+          },
+          "formulaic": {
+            "transitionDensity": 0,
+            "formulaicPhraseDensity": 0,
+            "uniqueTransitionsUsed": 0,
+            "repeatedTransitionCount": 0,
+            "openingFormulaCount": 0,
+            "closingFormulaCount": 0,
+            "matches": [],
+            "formulaicScore": 0
+          }
+        },
+        {
+          "sentenceId": 12,
+          "text": "The cello no longer lives in its case when I'm home.",
+          "structural": {
+            "wordCount": 11,
+            "charCount": 52,
+            "sentenceLength": 11,
+            "avgWordLength": 3.6363636363636362,
+            "longWordRatio": 0,
+            "shortWordRatio": 0.45454545454545453,
+            "commaDensity": 0,
+            "semicolonDensity": 0,
+            "colonDensity": 0,
+            "questionMarkCount": 0,
+            "exclamationCount": 0,
+            "parenthesisCount": 0,
+            "quotationCount": 1,
+            "dashCount": 0,
+            "totalPunctuation": 2,
+            "allCapsWordCount": 0,
+            "titleCaseWordCount": 2,
+            "numericCount": 0,
+            "sentenceIndex": 12,
+            "paragraphIndex": 0
+          },
+          "windowLexical": {
+            "typeTokenRatio": 0.9,
+            "movingAvgTTR": 0.9,
+            "uniqueWordRatio": 0.9,
+            "vocabularySize": 45,
+            "repeatedWordRatio": 0.022222222222222223,
+            "topWordFrequency": 0.02,
+            "bigramDiversityRatio": 1,
+            "trigramDiversityRatio": 1,
+            "functionWordRatio": 0.52,
+            "contentWordRatio": 0.48,
+            "stopwordRatio": 0.52,
+            "rareWordRatio": 0.12,
+            "commonWordRatio": 0.88,
+            "adjectiveAdverbDensity": 0.04,
+            "pronounDensity": 0.16,
+            "conjunctionDensity": 0.04,
+            "avgWordsPerSentence": 12.5
+          },
+          "windowRepetition": {
+            "repeatedBigramCount": 0,
+            "repeatedTrigramCount": 0,
+            "repeatedFourgramCount": 0,
+            "bigramRepetitionRate": 0,
+            "trigramRepetitionRate": 0,
+            "repeatedOpeningCount": 0,
+            "repeatedEndingCount": 0,
+            "openingRepetitionRate": 0,
+            "repeatedTransitionCount": 0,
+            "transitionVarietyScore": 1,
+            "repeatedPhrases": []
+          },
+          "formulaic": {
+            "transitionDensity": 0,
+            "formulaicPhraseDensity": 0,
+            "uniqueTransitionsUsed": 0,
+            "repeatedTransitionCount": 0,
+            "openingFormulaCount": 0,
+            "closingFormulaCount": 0,
+            "matches": [],
+            "formulaicScore": 0
+          }
+        },
+        {
+          "sentenceId": 13,
+          "text": "It leans against my desk, usually in the way, occasionally knocked over by the cat who once fled from my playing.",
+          "structural": {
+            "wordCount": 21,
+            "charCount": 113,
+            "sentenceLength": 21,
+            "avgWordLength": 4.285714285714286,
+            "longWordRatio": 0.23809523809523808,
+            "shortWordRatio": 0.47619047619047616,
+            "commaDensity": 0.09523809523809523,
+            "semicolonDensity": 0,
+            "colonDensity": 0,
+            "questionMarkCount": 0,
+            "exclamationCount": 0,
+            "parenthesisCount": 0,
+            "quotationCount": 0,
+            "dashCount": 0,
+            "totalPunctuation": 3,
+            "allCapsWordCount": 0,
+            "titleCaseWordCount": 1,
+            "numericCount": 0,
+            "sentenceIndex": 13,
+            "paragraphIndex": 0
+          },
+          "windowLexical": {
+            "typeTokenRatio": 0.8809523809523809,
+            "movingAvgTTR": 0.8809523809523809,
+            "uniqueWordRatio": 0.8809523809523809,
+            "vocabularySize": 37,
+            "repeatedWordRatio": 0.02702702702702703,
+            "topWordFrequency": 0.023809523809523808,
+            "bigramDiversityRatio": 1,
+            "trigramDiversityRatio": 1,
+            "functionWordRatio": 0.5,
+            "contentWordRatio": 0.5,
+            "stopwordRatio": 0.5,
+            "rareWordRatio": 0.09523809523809523,
+            "commonWordRatio": 0.9047619047619048,
+            "adjectiveAdverbDensity": 0.047619047619047616,
+            "pronounDensity": 0.14285714285714285,
+            "conjunctionDensity": 0.047619047619047616,
+            "avgWordsPerSentence": 14
+          },
+          "windowRepetition": {
+            "repeatedBigramCount": 0,
+            "repeatedTrigramCount": 0,
+            "repeatedFourgramCount": 0,
+            "bigramRepetitionRate": 0,
+            "trigramRepetitionRate": 0,
+            "repeatedOpeningCount": 0,
+            "repeatedEndingCount": 0,
+            "openingRepetitionRate": 0,
+            "repeatedTransitionCount": 0,
+            "transitionVarietyScore": 1,
+            "repeatedPhrases": []
+          },
+          "formulaic": {
+            "transitionDensity": 0,
+            "formulaicPhraseDensity": 0,
+            "uniqueTransitionsUsed": 0,
+            "repeatedTransitionCount": 0,
+            "openingFormulaCount": 0,
+            "closingFormulaCount": 0,
+            "matches": [],
+            "formulaicScore": 0
+          }
+        }
+      ]
+    }
+  },
+  {
+    "text": "Throughout my academic journey, I have had the opportunity to develop as both a student and a leader. These experiences have shaped my perspective in meaningful ways and have prepared me for the challenges of higher education. Furthermore, my involvement in student government has been instrumental in fostering my leadership skills. As class president, I was responsible for organizing school events, mediating conflicts between students, and advocating for the needs of my peers. This experience taught me the importance of communication, collaboration, and perseverance. In addition to my leadership roles, I have also demonstrated a strong commitment to academic excellence. I have maintained a high GPA throughout my high school career, taking challenging courses in mathematics, science, and the humanities. Moreover, I have participated in numerous extracurricular activities that have allowed me to explore my interests and develop new skills. It is important to note that my journey has not been without its challenges. There were moments when I faced adversity and self-doubt. However, through determination and a growth mindset, I was able to overcome these obstacles and emerge stronger as a result. In conclusion, I am confident that my experiences and skills have prepared me well for the rigors of college.",
+    "label": "ai",
+    "features": {
+      "wordCount": 202,
+      "sentenceCount": 12,
+      "paragraphCount": 1,
+      "avgWordsPerSentence": 16.833333333333332,
+      "avgSentencesPerParagraph": 12,
+      "crossSentence": {
+        "meanLength": 16.833333333333332,
+        "stdDevLength": 3.8693955887479667,
+        "coefficientOfVariation": 0.22986508448007725,
+        "burstiness": -0.6261946332475123,
+        "adjacentVariationMean": 5.181818181818182,
+        "rhythmScore": 0.7701349155199227
+      },
+      "documentLexical": {
+        "typeTokenRatio": 0.5891089108910891,
+        "movingAvgTTR": 0.8228758169934637,
+        "uniqueWordRatio": 0.5891089108910891,
+        "vocabularySize": 119,
+        "repeatedWordRatio": 0.11764705882352941,
+        "topWordFrequency": 0.01485148514851485,
+        "bigramDiversityRatio": 0.9402985074626866,
+        "trigramDiversityRatio": 0.995,
+        "functionWordRatio": 0.504950495049505,
+        "contentWordRatio": 0.49504950495049505,
+        "stopwordRatio": 0.504950495049505,
+        "rareWordRatio": 0.22772277227722773,
+        "commonWordRatio": 0.7722772277227723,
+        "adjectiveAdverbDensity": 0.0297029702970297,
+        "pronounDensity": 0.1188118811881188,
+        "conjunctionDensity": 0.09900990099009901,
+        "avgWordsPerSentence": 16.833333333333332
+      },
+      "documentRepetition": {
+        "repeatedBigramCount": 9,
+        "repeatedTrigramCount": 1,
+        "repeatedFourgramCount": 0,
+        "bigramRepetitionRate": 0.1044776119402985,
+        "trigramRepetitionRate": 0.01,
+        "repeatedOpeningCount": 0,
+        "repeatedEndingCount": 0,
+        "openingRepetitionRate": 0,
+        "repeatedTransitionCount": 0,
+        "transitionVarietyScore": 1,
+        "repeatedPhrases": [
+          {
+            "phrase": "i_have",
+            "count": 4,
+            "type": "bigram"
+          },
+          {
+            "phrase": "for_the",
+            "count": 3,
+            "type": "bigram"
+          },
+          {
+            "phrase": "throughout_my",
+            "count": 2,
+            "type": "bigram"
+          },
+          {
+            "phrase": "have_prepared_me",
+            "count": 2,
+            "type": "trigram"
+          }
+        ]
+      },
+      "documentPunctuation": {
+        "punctuationEntropy": 1.1779653169582593,
+        "punctuationDiversity": 3,
+        "periodsPer100Words": 5.9405940594059405,
+        "commasPer100Words": 7.425742574257425,
+        "semicolonsPer100Words": 0,
+        "colonsPer100Words": 0,
+        "dashesEmDashesPer100Words": 0.49504950495049505,
+        "questionMarksPer100Words": 0,
+        "exclamationsPer100Words": 0,
+        "parenthesesPer100Words": 0,
+        "ellipsesPer100Words": 0,
+        "clauseDensity": 1.25,
+        "avgClausesPerSentence": 2.25,
+        "paragraphLengthVariance": 0,
+        "sentenceLengthVariance": 14.972222222222223
+      },
+      "documentFormulaic": {
+        "transitionDensity": 3.4653465346534653,
+        "formulaicPhraseDensity": 3.9603960396039604,
+        "uniqueTransitionsUsed": 8,
+        "repeatedTransitionCount": 0,
+        "openingFormulaCount": 0,
+        "closingFormulaCount": 1,
+        "matches": [
+          {
+            "phrase": "furthermore",
+            "category": "additive_transition",
+            "count": 1,
+            "positions": [
+              227
+            ]
+          },
+          {
+            "phrase": "moreover",
+            "category": "additive_transition",
+            "count": 1,
+            "positions": [
+              814
+            ]
+          },
+          {
+            "phrase": "in addition",
+            "category": "additive_transition",
+            "count": 1,
+            "positions": [
+              574
+            ]
+          },
+          {
+            "phrase": "in conclusion",
+            "category": "conclusive_transition",
+            "count": 1,
+            "positions": [
+              1212
+            ]
+          },
+          {
+            "phrase": "as a result",
+            "category": "causal_transition",
+            "count": 1,
+            "positions": [
+              1199
+            ]
+          },
+          {
+            "phrase": "however",
+            "category": "contrastive_transition",
+            "count": 1,
+            "positions": [
+              1087
+            ]
+          },
+          {
+            "phrase": "it is important to note",
+            "category": "metacommentary",
+            "count": 1,
+            "positions": [
+              952
+            ]
+          },
+          {
+            "phrase": "i am confident that",
+            "category": "essay_closing",
+            "count": 1,
+            "positions": [
+              1227
+            ]
+          }
+        ],
+        "formulaicScore": 1
+      },
+      "sentences": [
+        {
+          "sentenceId": 0,
+          "text": "Throughout my academic journey, I have had the opportunity to develop as both a student and a leader.",
+          "structural": {
+            "wordCount": 18,
+            "charCount": 101,
+            "sentenceLength": 18,
+            "avgWordLength": 4.555555555555555,
+            "longWordRatio": 0.3333333333333333,
+            "shortWordRatio": 0.5,
+            "commaDensity": 0.05555555555555555,
+            "semicolonDensity": 0,
+            "colonDensity": 0,
+            "questionMarkCount": 0,
+            "exclamationCount": 0,
+            "parenthesisCount": 0,
+            "quotationCount": 0,
+            "dashCount": 0,
+            "totalPunctuation": 2,
+            "allCapsWordCount": 0,
+            "titleCaseWordCount": 1,
+            "numericCount": 0,
+            "sentenceIndex": 0,
+            "paragraphIndex": 0
+          },
+          "windowLexical": {
+            "typeTokenRatio": 0.7261904761904762,
+            "movingAvgTTR": 0.8160000000000001,
+            "uniqueWordRatio": 0.7261904761904762,
+            "vocabularySize": 61,
+            "repeatedWordRatio": 0.11475409836065574,
+            "topWordFrequency": 0.023809523809523808,
+            "bigramDiversityRatio": 0.9879518072289156,
+            "trigramDiversityRatio": 1,
+            "functionWordRatio": 0.5,
+            "contentWordRatio": 0.5,
+            "stopwordRatio": 0.5,
+            "rareWordRatio": 0.2857142857142857,
+            "commonWordRatio": 0.7142857142857143,
+            "adjectiveAdverbDensity": 0.047619047619047616,
+            "pronounDensity": 0.10714285714285714,
+            "conjunctionDensity": 0.09523809523809523,
+            "avgWordsPerSentence": 16.8
+          },
+          "windowRepetition": {
+            "repeatedBigramCount": 1,
+            "repeatedTrigramCount": 0,
+            "repeatedFourgramCount": 0,
+            "bigramRepetitionRate": 0.024096385542168676,
+            "trigramRepetitionRate": 0,
+            "repeatedOpeningCount": 0,
+            "repeatedEndingCount": 0,
+            "openingRepetitionRate": 0,
+            "repeatedTransitionCount": 0,
+            "transitionVarietyScore": 1,
+            "repeatedPhrases": [
+              {
+                "phrase": "for_the",
+                "count": 2,
+                "type": "bigram"
+              }
+            ]
+          },
+          "formulaic": {
+            "transitionDensity": 0,
+            "formulaicPhraseDensity": 0,
+            "uniqueTransitionsUsed": 0,
+            "repeatedTransitionCount": 0,
+            "openingFormulaCount": 0,
+            "closingFormulaCount": 0,
+            "matches": [],
+            "formulaicScore": 0
+          }
+        },
+        {
+          "sentenceId": 1,
+          "text": "These experiences have shaped my perspective in meaningful ways and have prepared me for the challenges of higher education.",
+          "structural": {
+            "wordCount": 19,
+            "charCount": 124,
+            "sentenceLength": 19,
+            "avgWordLength": 5.526315789473684,
+            "longWordRatio": 0.3157894736842105,
+            "shortWordRatio": 0.3684210526315789,
+            "commaDensity": 0,
+            "semicolonDensity": 0,
+            "colonDensity": 0,
+            "questionMarkCount": 0,
+            "exclamationCount": 0,
+            "parenthesisCount": 0,
+            "quotationCount": 0,
+            "dashCount": 0,
+            "totalPunctuation": 1,
+            "allCapsWordCount": 0,
+            "titleCaseWordCount": 1,
+            "numericCount": 0,
+            "sentenceIndex": 1,
+            "paragraphIndex": 0
+          },
+          "windowLexical": {
+            "typeTokenRatio": 0.7261904761904762,
+            "movingAvgTTR": 0.8160000000000001,
+            "uniqueWordRatio": 0.7261904761904762,
+            "vocabularySize": 61,
+            "repeatedWordRatio": 0.11475409836065574,
+            "topWordFrequency": 0.023809523809523808,
+            "bigramDiversityRatio": 0.9879518072289156,
+            "trigramDiversityRatio": 1,
+            "functionWordRatio": 0.5,
+            "contentWordRatio": 0.5,
+            "stopwordRatio": 0.5,
+            "rareWordRatio": 0.2857142857142857,
+            "commonWordRatio": 0.7142857142857143,
+            "adjectiveAdverbDensity": 0.047619047619047616,
+            "pronounDensity": 0.10714285714285714,
+            "conjunctionDensity": 0.09523809523809523,
+            "avgWordsPerSentence": 16.8
+          },
+          "windowRepetition": {
+            "repeatedBigramCount": 1,
+            "repeatedTrigramCount": 0,
+            "repeatedFourgramCount": 0,
+            "bigramRepetitionRate": 0.024096385542168676,
+            "trigramRepetitionRate": 0,
+            "repeatedOpeningCount": 0,
+            "repeatedEndingCount": 0,
+            "openingRepetitionRate": 0,
+            "repeatedTransitionCount": 0,
+            "transitionVarietyScore": 1,
+            "repeatedPhrases": [
+              {
+                "phrase": "for_the",
+                "count": 2,
+                "type": "bigram"
+              }
+            ]
+          },
+          "formulaic": {
+            "transitionDensity": 0,
+            "formulaicPhraseDensity": 0,
+            "uniqueTransitionsUsed": 0,
+            "repeatedTransitionCount": 0,
+            "openingFormulaCount": 0,
+            "closingFormulaCount": 0,
+            "matches": [],
+            "formulaicScore": 0
+          }
+        },
+        {
+          "sentenceId": 2,
+          "text": "Furthermore, my involvement in student government has been instrumental in fostering my leadership skills.",
+          "structural": {
+            "wordCount": 14,
+            "charCount": 106,
+            "sentenceLength": 14,
+            "avgWordLength": 6.5,
+            "longWordRatio": 0.5,
+            "shortWordRatio": 0.35714285714285715,
+            "commaDensity": 0.07142857142857142,
+            "semicolonDensity": 0,
+            "colonDensity": 0,
+            "questionMarkCount": 0,
+            "exclamationCount": 0,
+            "parenthesisCount": 0,
+            "quotationCount": 0,
+            "dashCount": 0,
+            "totalPunctuation": 2,
+            "allCapsWordCount": 0,
+            "titleCaseWordCount": 1,
+            "numericCount": 0,
+            "sentenceIndex": 2,
+            "paragraphIndex": 0
+          },
+          "windowLexical": {
+            "typeTokenRatio": 0.7261904761904762,
+            "movingAvgTTR": 0.8160000000000001,
+            "uniqueWordRatio": 0.7261904761904762,
+            "vocabularySize": 61,
+            "repeatedWordRatio": 0.11475409836065574,
+            "topWordFrequency": 0.023809523809523808,
+            "bigramDiversityRatio": 0.9879518072289156,
+            "trigramDiversityRatio": 1,
+            "functionWordRatio": 0.5,
+            "contentWordRatio": 0.5,
+            "stopwordRatio": 0.5,
+            "rareWordRatio": 0.2857142857142857,
+            "commonWordRatio": 0.7142857142857143,
+            "adjectiveAdverbDensity": 0.047619047619047616,
+            "pronounDensity": 0.10714285714285714,
+            "conjunctionDensity": 0.09523809523809523,
+            "avgWordsPerSentence": 16.8
+          },
+          "windowRepetition": {
+            "repeatedBigramCount": 1,
+            "repeatedTrigramCount": 0,
+            "repeatedFourgramCount": 0,
+            "bigramRepetitionRate": 0.024096385542168676,
+            "trigramRepetitionRate": 0,
+            "repeatedOpeningCount": 0,
+            "repeatedEndingCount": 0,
+            "openingRepetitionRate": 0,
+            "repeatedTransitionCount": 0,
+            "transitionVarietyScore": 1,
+            "repeatedPhrases": [
+              {
+                "phrase": "for_the",
+                "count": 2,
+                "type": "bigram"
+              }
+            ]
+          },
+          "formulaic": {
+            "transitionDensity": 7.142857142857143,
+            "formulaicPhraseDensity": 7.142857142857143,
+            "uniqueTransitionsUsed": 1,
+            "repeatedTransitionCount": 0,
+            "openingFormulaCount": 0,
+            "closingFormulaCount": 0,
+            "matches": [
+              {
+                "phrase": "furthermore",
+                "category": "additive_transition",
+                "count": 1,
+                "positions": [
+                  0
+                ]
+              }
+            ],
+            "formulaicScore": 0.7
+          }
+        },
+        {
+          "sentenceId": 3,
+          "text": "As class president, I was responsible for organizing school events, mediating conflicts between students, and advocating for the needs of my peers.",
+          "structural": {
+            "wordCount": 22,
+            "charCount": 147,
+            "sentenceLength": 22,
+            "avgWordLength": 5.545454545454546,
+            "longWordRatio": 0.36363636363636365,
+            "shortWordRatio": 0.4090909090909091,
+            "commaDensity": 0.13636363636363635,
+            "semicolonDensity": 0,
+            "colonDensity": 0,
+            "questionMarkCount": 0,
+            "exclamationCount": 0,
+            "parenthesisCount": 0,
+            "quotationCount": 0,
+            "dashCount": 0,
+            "totalPunctuation": 4,
+            "allCapsWordCount": 0,
+            "titleCaseWordCount": 1,
+            "numericCount": 0,
+            "sentenceIndex": 3,
+            "paragraphIndex": 0
+          },
+          "windowLexical": {
+            "typeTokenRatio": 0.7439024390243902,
+            "movingAvgTTR": 0.8266666666666668,
+            "uniqueWordRatio": 0.7439024390243902,
+            "vocabularySize": 61,
+            "repeatedWordRatio": 0.11475409836065574,
+            "topWordFrequency": 0.024390243902439025,
+            "bigramDiversityRatio": 0.9753086419753086,
+            "trigramDiversityRatio": 1,
+            "functionWordRatio": 0.47560975609756095,
+            "contentWordRatio": 0.524390243902439,
+            "stopwordRatio": 0.47560975609756095,
+            "rareWordRatio": 0.3170731707317073,
+            "commonWordRatio": 0.6829268292682926,
+            "adjectiveAdverbDensity": 0.04878048780487805,
+            "pronounDensity": 0.10975609756097561,
+            "conjunctionDensity": 0.08536585365853659,
+            "avgWordsPerSentence": 16.4
+          },
+          "windowRepetition": {
+            "repeatedBigramCount": 2,
+            "repeatedTrigramCount": 0,
+            "repeatedFourgramCount": 0,
+            "bigramRepetitionRate": 0.04938271604938271,
+            "trigramRepetitionRate": 0,
+            "repeatedOpeningCount": 0,
+            "repeatedEndingCount": 0,
+            "openingRepetitionRate": 0,
+            "repeatedTransitionCount": 0,
+            "transitionVarietyScore": 1,
+            "repeatedPhrases": [
+              {
+                "phrase": "for_the",
+                "count": 2,
+                "type": "bigram"
+              },
+              {
+                "phrase": "my_leadership",
+                "count": 2,
+                "type": "bigram"
+              }
+            ]
+          },
+          "formulaic": {
+            "transitionDensity": 0,
+            "formulaicPhraseDensity": 0,
+            "uniqueTransitionsUsed": 0,
+            "repeatedTransitionCount": 0,
+            "openingFormulaCount": 0,
+            "closingFormulaCount": 0,
+            "matches": [],
+            "formulaicScore": 0
+          }
+        },
+        {
+          "sentenceId": 4,
+          "text": "This experience taught me the importance of communication, collaboration, and perseverance.",
+          "structural": {
+            "wordCount": 11,
+            "charCount": 91,
+            "sentenceLength": 11,
+            "avgWordLength": 7.090909090909091,
+            "longWordRatio": 0.45454545454545453,
+            "shortWordRatio": 0.36363636363636365,
+            "commaDensity": 0.18181818181818182,
+            "semicolonDensity": 0,
+            "colonDensity": 0,
+            "questionMarkCount": 0,
+            "exclamationCount": 0,
+            "parenthesisCount": 0,
+            "quotationCount": 0,
+            "dashCount": 0,
+            "totalPunctuation": 3,
+            "allCapsWordCount": 0,
+            "titleCaseWordCount": 1,
+            "numericCount": 0,
+            "sentenceIndex": 4,
+            "paragraphIndex": 0
+          },
+          "windowLexical": {
+            "typeTokenRatio": 0.7469879518072289,
+            "movingAvgTTR": 0.8135294117647062,
+            "uniqueWordRatio": 0.7469879518072289,
+            "vocabularySize": 62,
+            "repeatedWordRatio": 0.08064516129032258,
+            "topWordFrequency": 0.024096385542168676,
+            "bigramDiversityRatio": 0.975609756097561,
+            "trigramDiversityRatio": 1,
+            "functionWordRatio": 0.43373493975903615,
+            "contentWordRatio": 0.5662650602409639,
+            "stopwordRatio": 0.43373493975903615,
+            "rareWordRatio": 0.3132530120481928,
+            "commonWordRatio": 0.6867469879518072,
+            "adjectiveAdverbDensity": 0.024096385542168676,
+            "pronounDensity": 0.10843373493975904,
+            "conjunctionDensity": 0.07228915662650602,
+            "avgWordsPerSentence": 16.6
+          },
+          "windowRepetition": {
+            "repeatedBigramCount": 2,
+            "repeatedTrigramCount": 0,
+            "repeatedFourgramCount": 0,
+            "bigramRepetitionRate": 0.04878048780487805,
+            "trigramRepetitionRate": 0,
+            "repeatedOpeningCount": 0,
+            "repeatedEndingCount": 0,
+            "openingRepetitionRate": 0,
+            "repeatedTransitionCount": 0,
+            "transitionVarietyScore": 1,
+            "repeatedPhrases": [
+              {
+                "phrase": "my_leadership",
+                "count": 2,
+                "type": "bigram"
+              },
+              {
+                "phrase": "i_have",
+                "count": 2,
+                "type": "bigram"
+              }
+            ]
+          },
+          "formulaic": {
+            "transitionDensity": 0,
+            "formulaicPhraseDensity": 0,
+            "uniqueTransitionsUsed": 0,
+            "repeatedTransitionCount": 0,
+            "openingFormulaCount": 0,
+            "closingFormulaCount": 0,
+            "matches": [],
+            "formulaicScore": 0
+          }
+        },
+        {
+          "sentenceId": 5,
+          "text": "In addition to my leadership roles, I have also demonstrated a strong commitment to academic excellence.",
+          "structural": {
+            "wordCount": 16,
+            "charCount": 104,
+            "sentenceLength": 16,
+            "avgWordLength": 5.4375,
+            "longWordRatio": 0.375,
+            "shortWordRatio": 0.375,
+            "commaDensity": 0.0625,
+            "semicolonDensity": 0,
+            "colonDensity": 0,
+            "questionMarkCount": 0,
+            "exclamationCount": 0,
+            "parenthesisCount": 0,
+            "quotationCount": 0,
+            "dashCount": 0,
+            "totalPunctuation": 2,
+            "allCapsWordCount": 0,
+            "titleCaseWordCount": 1,
+            "numericCount": 0,
+            "sentenceIndex": 5,
+            "paragraphIndex": 0
+          },
+          "windowLexical": {
+            "typeTokenRatio": 0.7303370786516854,
+            "movingAvgTTR": 0.7875000000000008,
+            "uniqueWordRatio": 0.7303370786516854,
+            "vocabularySize": 65,
+            "repeatedWordRatio": 0.1076923076923077,
+            "topWordFrequency": 0.02247191011235955,
+            "bigramDiversityRatio": 0.9772727272727273,
+            "trigramDiversityRatio": 1,
+            "functionWordRatio": 0.43820224719101125,
+            "contentWordRatio": 0.5617977528089888,
+            "stopwordRatio": 0.43820224719101125,
+            "rareWordRatio": 0.2696629213483146,
+            "commonWordRatio": 0.7303370786516854,
+            "adjectiveAdverbDensity": 0.02247191011235955,
+            "pronounDensity": 0.11235955056179775,
+            "conjunctionDensity": 0.0898876404494382,
+            "avgWordsPerSentence": 17.8
+          },
+          "windowRepetition": {
+            "repeatedBigramCount": 1,
+            "repeatedTrigramCount": 0,
+            "repeatedFourgramCount": 0,
+            "bigramRepetitionRate": 0.03409090909090909,
+            "trigramRepetitionRate": 0,
+            "repeatedOpeningCount": 0,
+            "repeatedEndingCount": 0,
+            "openingRepetitionRate": 0,
+            "repeatedTransitionCount": 0,
+            "transitionVarietyScore": 1,
+            "repeatedPhrases": [
+              {
+                "phrase": "i_have",
+                "count": 3,
+                "type": "bigram"
+              }
+            ]
+          },
+          "formulaic": {
+            "transitionDensity": 6.25,
+            "formulaicPhraseDensity": 6.25,
+            "uniqueTransitionsUsed": 1,
+            "repeatedTransitionCount": 0,
+            "openingFormulaCount": 0,
+            "closingFormulaCount": 0,
+            "matches": [
+              {
+                "phrase": "in addition",
+                "category": "additive_transition",
+                "count": 1,
+                "positions": [
+                  0
+                ]
+              }
+            ],
+            "formulaicScore": 0.5
+          }
+        },
+        {
+          "sentenceId": 6,
+          "text": "I have maintained a high GPA throughout my high school career, taking challenging courses in mathematics, science, and the humanities.",
+          "structural": {
+            "wordCount": 20,
+            "charCount": 134,
+            "sentenceLength": 20,
+            "avgWordLength": 5.55,
+            "longWordRatio": 0.35,
+            "shortWordRatio": 0.35,
+            "commaDensity": 0.15,
+            "semicolonDensity": 0,
+            "colonDensity": 0,
+            "questionMarkCount": 0,
+            "exclamationCount": 0,
+            "parenthesisCount": 0,
+            "quotationCount": 0,
+            "dashCount": 0,
+            "totalPunctuation": 4,
+            "allCapsWordCount": 1,
+            "titleCaseWordCount": 0,
+            "numericCount": 0,
+            "sentenceIndex": 6,
+            "paragraphIndex": 0
+          },
+          "windowLexical": {
+            "typeTokenRatio": 0.7530864197530864,
+            "movingAvgTTR": 0.7875000000000001,
+            "uniqueWordRatio": 0.7530864197530864,
+            "vocabularySize": 61,
+            "repeatedWordRatio": 0.09836065573770492,
+            "topWordFrequency": 0.024691358024691357,
+            "bigramDiversityRatio": 0.975,
+            "trigramDiversityRatio": 1,
+            "functionWordRatio": 0.4691358024691358,
+            "contentWordRatio": 0.5308641975308642,
+            "stopwordRatio": 0.4691358024691358,
+            "rareWordRatio": 0.24691358024691357,
+            "commonWordRatio": 0.7530864197530864,
+            "adjectiveAdverbDensity": 0.012345679012345678,
+            "pronounDensity": 0.13580246913580246,
+            "conjunctionDensity": 0.07407407407407407,
+            "avgWordsPerSentence": 16.2
+          },
+          "windowRepetition": {
+            "repeatedBigramCount": 1,
+            "repeatedTrigramCount": 0,
+            "repeatedFourgramCount": 0,
+            "bigramRepetitionRate": 0.0375,
+            "trigramRepetitionRate": 0,
+            "repeatedOpeningCount": 0,
+            "repeatedEndingCount": 0,
+            "openingRepetitionRate": 0,
+            "repeatedTransitionCount": 0,
+            "transitionVarietyScore": 1,
+            "repeatedPhrases": [
+              {
+                "phrase": "i_have",
+                "count": 3,
+                "type": "bigram"
+              }
+            ]
+          },
+          "formulaic": {
+            "transitionDensity": 0,
+            "formulaicPhraseDensity": 0,
+            "uniqueTransitionsUsed": 0,
+            "repeatedTransitionCount": 0,
+            "openingFormulaCount": 0,
+            "closingFormulaCount": 0,
+            "matches": [],
+            "formulaicScore": 0
+          }
+        },
+        {
+          "sentenceId": 7,
+          "text": "Moreover, I have participated in numerous extracurricular activities that have allowed me to explore my interests and develop new skills.",
+          "structural": {
+            "wordCount": 20,
+            "charCount": 137,
+            "sentenceLength": 20,
+            "avgWordLength": 5.8,
+            "longWordRatio": 0.45,
+            "shortWordRatio": 0.35,
+            "commaDensity": 0.05,
+            "semicolonDensity": 0,
+            "colonDensity": 0,
+            "questionMarkCount": 0,
+            "exclamationCount": 0,
+            "parenthesisCount": 0,
+            "quotationCount": 0,
+            "dashCount": 0,
+            "totalPunctuation": 2,
+            "allCapsWordCount": 0,
+            "titleCaseWordCount": 1,
+            "numericCount": 0,
+            "sentenceIndex": 7,
+            "paragraphIndex": 0
+          },
+          "windowLexical": {
+            "typeTokenRatio": 0.759493670886076,
+            "movingAvgTTR": 0.8160000000000001,
+            "uniqueWordRatio": 0.759493670886076,
+            "vocabularySize": 60,
+            "repeatedWordRatio": 0.1,
+            "topWordFrequency": 0.02531645569620253,
+            "bigramDiversityRatio": 0.9743589743589743,
+            "trigramDiversityRatio": 1,
+            "functionWordRatio": 0.4810126582278481,
+            "contentWordRatio": 0.5189873417721519,
+            "stopwordRatio": 0.4810126582278481,
+            "rareWordRatio": 0.21518987341772153,
+            "commonWordRatio": 0.7848101265822784,
+            "adjectiveAdverbDensity": 0.012658227848101266,
+            "pronounDensity": 0.13924050632911392,
+            "conjunctionDensity": 0.0759493670886076,
+            "avgWordsPerSentence": 15.8
+          },
+          "windowRepetition": {
+            "repeatedBigramCount": 1,
+            "repeatedTrigramCount": 0,
+            "repeatedFourgramCount": 0,
+            "bigramRepetitionRate": 0.038461538461538464,
+            "trigramRepetitionRate": 0,
+            "repeatedOpeningCount": 0,
+            "repeatedEndingCount": 0,
+            "openingRepetitionRate": 0,
+            "repeatedTransitionCount": 0,
+            "transitionVarietyScore": 1,
+            "repeatedPhrases": [
+              {
+                "phrase": "i_have",
+                "count": 3,
+                "type": "bigram"
+              }
+            ]
+          },
+          "formulaic": {
+            "transitionDensity": 5,
+            "formulaicPhraseDensity": 5,
+            "uniqueTransitionsUsed": 1,
+            "repeatedTransitionCount": 0,
+            "openingFormulaCount": 0,
+            "closingFormulaCount": 0,
+            "matches": [
+              {
+                "phrase": "moreover",
+                "category": "additive_transition",
+                "count": 1,
+                "positions": [
+                  0
+                ]
+              }
+            ],
+            "formulaicScore": 0.7
+          }
+        },
+        {
+          "sentenceId": 8,
+          "text": "It is important to note that my journey has not been without its challenges.",
+          "structural": {
+            "wordCount": 14,
+            "charCount": 76,
+            "sentenceLength": 14,
+            "avgWordLength": 4.428571428571429,
+            "longWordRatio": 0.2857142857142857,
+            "shortWordRatio": 0.5,
+            "commaDensity": 0,
+            "semicolonDensity": 0,
+            "colonDensity": 0,
+            "questionMarkCount": 0,
+            "exclamationCount": 0,
+            "parenthesisCount": 0,
+            "quotationCount": 0,
+            "dashCount": 0,
+            "totalPunctuation": 1,
+            "allCapsWordCount": 0,
+            "titleCaseWordCount": 1,
+            "numericCount": 0,
+            "sentenceIndex": 8,
+            "paragraphIndex": 0
+          },
+          "windowLexical": {
+            "typeTokenRatio": 0.7831325301204819,
+            "movingAvgTTR": 0.8523529411764703,
+            "uniqueWordRatio": 0.7831325301204819,
+            "vocabularySize": 65,
+            "repeatedWordRatio": 0.09230769230769231,
+            "topWordFrequency": 0.024096385542168676,
+            "bigramDiversityRatio": 0.9878048780487805,
+            "trigramDiversityRatio": 1,
+            "functionWordRatio": 0.4939759036144578,
+            "contentWordRatio": 0.5060240963855421,
+            "stopwordRatio": 0.4939759036144578,
+            "rareWordRatio": 0.18072289156626506,
+            "commonWordRatio": 0.8192771084337349,
+            "adjectiveAdverbDensity": 0.024096385542168676,
+            "pronounDensity": 0.12048192771084337,
+            "conjunctionDensity": 0.10843373493975904,
+            "avgWordsPerSentence": 16.6
+          },
+          "windowRepetition": {
+            "repeatedBigramCount": 1,
+            "repeatedTrigramCount": 0,
+            "repeatedFourgramCount": 0,
+            "bigramRepetitionRate": 0.024390243902439025,
+            "trigramRepetitionRate": 0,
+            "repeatedOpeningCount": 0,
+            "repeatedEndingCount": 0,
+            "openingRepetitionRate": 0,
+            "repeatedTransitionCount": 0,
+            "transitionVarietyScore": 1,
+            "repeatedPhrases": [
+              {
+                "phrase": "i_have",
+                "count": 2,
+                "type": "bigram"
+              }
+            ]
+          },
+          "formulaic": {
+            "transitionDensity": 7.142857142857143,
+            "formulaicPhraseDensity": 7.142857142857143,
+            "uniqueTransitionsUsed": 1,
+            "repeatedTransitionCount": 0,
+            "openingFormulaCount": 0,
+            "closingFormulaCount": 0,
+            "matches": [
+              {
+                "phrase": "it is important to note",
+                "category": "metacommentary",
+                "count": 1,
+                "positions": [
+                  0
+                ]
+              }
+            ],
+            "formulaicScore": 0.9
+          }
+        },
+        {
+          "sentenceId": 9,
+          "text": "There were moments when I faced adversity and self-doubt.",
+          "structural": {
+            "wordCount": 9,
+            "charCount": 57,
+            "sentenceLength": 9,
+            "avgWordLength": 5.222222222222222,
+            "longWordRatio": 0.3333333333333333,
+            "shortWordRatio": 0.2222222222222222,
+            "commaDensity": 0,
+            "semicolonDensity": 0,
+            "colonDensity": 0,
+            "questionMarkCount": 0,
+            "exclamationCount": 0,
+            "parenthesisCount": 0,
+            "quotationCount": 0,
+            "dashCount": 1,
+            "totalPunctuation": 2,
+            "allCapsWordCount": 0,
+            "titleCaseWordCount": 1,
+            "numericCount": 0,
+            "sentenceIndex": 9,
+            "paragraphIndex": 0
+          },
+          "windowLexical": {
+            "typeTokenRatio": 0.7682926829268293,
+            "movingAvgTTR": 0.8593939393939392,
+            "uniqueWordRatio": 0.7682926829268293,
+            "vocabularySize": 63,
+            "repeatedWordRatio": 0.09523809523809523,
+            "topWordFrequency": 0.024390243902439025,
+            "bigramDiversityRatio": 0.9876543209876543,
+            "trigramDiversityRatio": 1,
+            "functionWordRatio": 0.5487804878048781,
+            "contentWordRatio": 0.45121951219512196,
+            "stopwordRatio": 0.5487804878048781,
+            "rareWordRatio": 0.15853658536585366,
+            "commonWordRatio": 0.8414634146341463,
+            "adjectiveAdverbDensity": 0.024390243902439025,
+            "pronounDensity": 0.13414634146341464,
+            "conjunctionDensity": 0.13414634146341464,
+            "avgWordsPerSentence": 16.4
+          },
+          "windowRepetition": {
+            "repeatedBigramCount": 1,
+            "repeatedTrigramCount": 0,
+            "repeatedFourgramCount": 0,
+            "bigramRepetitionRate": 0.024691358024691357,
+            "trigramRepetitionRate": 0,
+            "repeatedOpeningCount": 0,
+            "repeatedEndingCount": 0,
+            "openingRepetitionRate": 0,
+            "repeatedTransitionCount": 0,
+            "transitionVarietyScore": 1,
+            "repeatedPhrases": [
+              {
+                "phrase": "that_my",
+                "count": 2,
+                "type": "bigram"
+              }
+            ]
+          },
+          "formulaic": {
+            "transitionDensity": 0,
+            "formulaicPhraseDensity": 0,
+            "uniqueTransitionsUsed": 0,
+            "repeatedTransitionCount": 0,
+            "openingFormulaCount": 0,
+            "closingFormulaCount": 0,
+            "matches": [],
+            "formulaicScore": 0
+          }
+        },
+        {
+          "sentenceId": 10,
+          "text": "However, through determination and a growth mindset, I was able to overcome these obstacles and emerge stronger as a result.",
+          "structural": {
+            "wordCount": 20,
+            "charCount": 124,
+            "sentenceLength": 20,
+            "avgWordLength": 5.1,
+            "longWordRatio": 0.35,
+            "shortWordRatio": 0.4,
+            "commaDensity": 0.1,
+            "semicolonDensity": 0,
+            "colonDensity": 0,
+            "questionMarkCount": 0,
+            "exclamationCount": 0,
+            "parenthesisCount": 0,
+            "quotationCount": 0,
+            "dashCount": 0,
+            "totalPunctuation": 3,
+            "allCapsWordCount": 0,
+            "titleCaseWordCount": 1,
+            "numericCount": 0,
+            "sentenceIndex": 10,
+            "paragraphIndex": 0
+          },
+          "windowLexical": {
+            "typeTokenRatio": 0.8548387096774194,
+            "movingAvgTTR": 0.8569230769230771,
+            "uniqueWordRatio": 0.8548387096774194,
+            "vocabularySize": 53,
+            "repeatedWordRatio": 0.03773584905660377,
+            "topWordFrequency": 0.016129032258064516,
+            "bigramDiversityRatio": 0.9836065573770492,
+            "trigramDiversityRatio": 1,
+            "functionWordRatio": 0.5806451612903226,
+            "contentWordRatio": 0.41935483870967744,
+            "stopwordRatio": 0.5806451612903226,
+            "rareWordRatio": 0.14516129032258066,
+            "commonWordRatio": 0.8548387096774194,
+            "adjectiveAdverbDensity": 0.016129032258064516,
+            "pronounDensity": 0.12903225806451613,
+            "conjunctionDensity": 0.12903225806451613,
+            "avgWordsPerSentence": 15.5
+          },
+          "windowRepetition": {
+            "repeatedBigramCount": 1,
+            "repeatedTrigramCount": 0,
+            "repeatedFourgramCount": 0,
+            "bigramRepetitionRate": 0.03278688524590164,
+            "trigramRepetitionRate": 0,
+            "repeatedOpeningCount": 0,
+            "repeatedEndingCount": 0,
+            "openingRepetitionRate": 0,
+            "repeatedTransitionCount": 0,
+            "transitionVarietyScore": 1,
+            "repeatedPhrases": [
+              {
+                "phrase": "that_my",
+                "count": 2,
+                "type": "bigram"
+              }
+            ]
+          },
+          "formulaic": {
+            "transitionDensity": 10,
+            "formulaicPhraseDensity": 10,
+            "uniqueTransitionsUsed": 2,
+            "repeatedTransitionCount": 0,
+            "openingFormulaCount": 0,
+            "closingFormulaCount": 0,
+            "matches": [
+              {
+                "phrase": "as a result",
+                "category": "causal_transition",
+                "count": 1,
+                "positions": [
+                  112
+                ]
+              },
+              {
+                "phrase": "however",
+                "category": "contrastive_transition",
+                "count": 1,
+                "positions": [
+                  0
+                ]
+              }
+            ],
+            "formulaicScore": 0.8
+          }
+        },
+        {
+          "sentenceId": 11,
+          "text": "In conclusion, I am confident that my experiences and skills have prepared me well for the rigors of college.",
+          "structural": {
+            "wordCount": 19,
+            "charCount": 109,
+            "sentenceLength": 19,
+            "avgWordLength": 4.684210526315789,
+            "longWordRatio": 0.2631578947368421,
+            "shortWordRatio": 0.47368421052631576,
+            "commaDensity": 0.05263157894736842,
+            "semicolonDensity": 0,
+            "colonDensity": 0,
+            "questionMarkCount": 0,
+            "exclamationCount": 0,
+            "parenthesisCount": 0,
+            "quotationCount": 0,
+            "dashCount": 0,
+            "totalPunctuation": 2,
+            "allCapsWordCount": 0,
+            "titleCaseWordCount": 1,
+            "numericCount": 0,
+            "sentenceIndex": 11,
+            "paragraphIndex": 0
+          },
+          "windowLexical": {
+            "typeTokenRatio": 0.875,
+            "movingAvgTTR": 0.875,
+            "uniqueWordRatio": 0.875,
+            "vocabularySize": 42,
+            "repeatedWordRatio": 0.047619047619047616,
+            "topWordFrequency": 0.020833333333333332,
+            "bigramDiversityRatio": 1,
+            "trigramDiversityRatio": 1,
+            "functionWordRatio": 0.5625,
+            "contentWordRatio": 0.4375,
+            "stopwordRatio": 0.5625,
+            "rareWordRatio": 0.14583333333333334,
+            "commonWordRatio": 0.8541666666666666,
+            "adjectiveAdverbDensity": 0.020833333333333332,
+            "pronounDensity": 0.10416666666666667,
+            "conjunctionDensity": 0.14583333333333334,
+            "avgWordsPerSentence": 16
+          },
+          "windowRepetition": {
+            "repeatedBigramCount": 0,
+            "repeatedTrigramCount": 0,
+            "repeatedFourgramCount": 0,
+            "bigramRepetitionRate": 0,
+            "trigramRepetitionRate": 0,
+            "repeatedOpeningCount": 0,
+            "repeatedEndingCount": 0,
+            "openingRepetitionRate": 0,
+            "repeatedTransitionCount": 0,
+            "transitionVarietyScore": 1,
+            "repeatedPhrases": []
+          },
+          "formulaic": {
+            "transitionDensity": 5.2631578947368425,
+            "formulaicPhraseDensity": 10.526315789473685,
+            "uniqueTransitionsUsed": 2,
+            "repeatedTransitionCount": 0,
+            "openingFormulaCount": 0,
+            "closingFormulaCount": 1,
+            "matches": [
+              {
+                "phrase": "in conclusion",
+                "category": "conclusive_transition",
+                "count": 1,
+                "positions": [
+                  0
+                ]
+              },
+              {
+                "phrase": "i am confident that",
+                "category": "essay_closing",
+                "count": 1,
+                "positions": [
+                  15
+                ]
+              }
+            ],
+            "formulaicScore": 1
+          }
+        }
+      ]
+    }
+  }
+]

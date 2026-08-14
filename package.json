@@ -6,21 +6,47 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui",
+    "dataset:prepare": "tsx scripts/dataset/prepare-dataset.ts",
+    "detector:train": "tsx scripts/training/train-classifier.ts",
+    "detector:evaluate": "tsx scripts/evaluation/evaluate.ts",
+    "generate:ai-essays": "tsx scripts/dataset/generate-ai-essays.ts"
   },
   "dependencies": {
+    "@radix-ui/react-accordion": "^1.2.0",
+    "@radix-ui/react-dialog": "^1.1.1",
+    "@radix-ui/react-progress": "^1.1.0",
+    "@radix-ui/react-slot": "^1.1.0",
+    "@radix-ui/react-tabs": "^1.1.0",
+    "@radix-ui/react-tooltip": "^1.1.2",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.412.0",
     "next": "16.3.1",
+    "openai": "^7.4.0",
     "react": "19.2.8",
-    "react-dom": "19.2.8"
+    "react-dom": "19.2.8",
+    "tailwind-merge": "^2.5.2",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
+    "@playwright/test": "^1.45.3",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@vitest/coverage-v8": "^1.6.0",
+    "@vitest/ui": "^1.6.0",
     "eslint": "^9",
     "eslint-config-next": "16.3.1",
+    "jsdom": "^24.1.1",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "tsx": "^4.16.2",
+    "typescript": "^5",
+    "vitest": "^1.6.0"
   }
 }
