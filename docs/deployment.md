@@ -1,92 +1,51 @@
-# Deployment Guide
+# Essay Lens — Deployment Guide
 
-## Vercel Deployment (Recommended)
-
-This application is designed for Vercel deployment from GitHub.
-
-### Prerequisites
-- GitHub account
-- Vercel account
-- (Optional) OpenAI API key for enhanced language model signal
-
-### Steps
-
-1. **Push to GitHub**
-   ```bash
-   git add .
-   git commit -m "Initial Essay Lens deployment"
-   git push origin main
-   ```
-
-2. **Connect to Vercel**
-   - Go to [vercel.com](https://vercel.com)
-   - Click "Add New Project"
-   - Import your GitHub repository
-   - Vercel will automatically detect Next.js
-
-3. **Configure Environment Variables**
-   In the Vercel dashboard → Settings → Environment Variables:
-
-   | Variable | Required | Description |
-   |----------|----------|-------------|
-   | `OPENAI_API_KEY` | Optional | OpenAI API key for log-probability signal |
-   | `MODEL_PROVIDER` | Optional | Set to `openai` if using API key |
-   | `MODEL_NAME` | Optional | Default: `gpt-3.5-turbo-instruct` |
-
-   **If no API key is provided**, the detector works in pure statistical mode.
-   A banner will inform users that LM signal is unavailable.
-
-4. **Deploy**
-   Click "Deploy". Vercel handles the rest.
-
-### Vercel Configuration
-
-No custom `vercel.json` is required. Next.js is auto-detected.
-
-Function settings:
-- API routes are serverless functions (default)
-- Timeout: 30 seconds (sufficient for analysis)
-- No persistent storage required
-
-### Environment Variable Security
-
-- **NEVER commit** `.env` or `.env.local` to Git
-- Use Vercel's environment variable system for production secrets
-- `OPENAI_API_KEY` is only accessed server-side in API routes
-- No environment variables are exposed to the client
+This guide explains how to run Essay Lens locally and deploy it to production on Vercel.
 
 ---
 
-## Local Development
+## 🔑 Environment Variables
 
+The application can run in two modes:
+1. **Offline/Pure Statistical Mode** (Default, no APIs required)
+2. **Hybrid Mode** (Includes OpenAI language model perplexity signals)
+
+### Required Environment Variables
+
+None. The core detector compiles, trains, and analyzes essays completely locally.
+
+### Optional Environment Variables (For Hybrid Mode)
+
+If you wish to include language-model token log-probabilities to supplement the analysis, configure these variables in Vercel:
+
+| Variable | Description | Recommended Value |
+| :--- | :--- | :--- |
+| `OPENAI_API_KEY` | Your OpenAI API key | `sk-proj-...` |
+| `MODEL_NAME` | Model to request token probabilities from | `gpt-3.5-turbo-instruct` |
+| `MODEL_PROVIDER` | Must be set to `openai` | `openai` |
+
+---
+
+## 💻 Local Setup & Development
+
+### 1. Install Dependencies
 ```bash
-# Install dependencies
 npm install
-
-# Start development server
-npm run dev
-
-# Open http://localhost:3000
 ```
 
-For local development with OpenAI signal:
+### 2. Configure Environment
+Copy `.env.example` to `.env.local` and add your OpenAI API key if desired:
 ```bash
-# Copy env template
 cp .env.example .env.local
-
-# Add your API key
-OPENAI_API_KEY=sk-...
-
-# Start dev server
-npm run dev
 ```
 
-The app works without any API key in pure statistical mode.
+### 3. Run Development Server
+```bash
+npm run dev
+```
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
----
-
-## Production Build
-
+### 4. Build and Run Production Locally
 ```bash
 npm run build
 npm run start
@@ -94,25 +53,30 @@ npm run start
 
 ---
 
-## Testing
+## 🚀 Pushing to GitHub & Vercel Deployment
 
+Since Next.js is natively optimized by Vercel, deployment requires no custom routing or configuration files.
+
+### 1. Push to GitHub
+Make sure all your local files are committed and pushed to your repo:
 ```bash
-# Unit tests
-npm run test
-
-# E2E tests (requires running dev server)
-npm run test:e2e
-
-# E2E with UI
-npm run test:e2e:ui
+git add .
+git commit -m "chore: prepare for release"
+git push origin main
 ```
+
+### 2. Import into Vercel
+1. Log in to [Vercel](https://vercel.com).
+2. Click **Add New** → **Project**.
+3. Select your `ESSAY_LENS` repository.
+4. Keep the default settings (Next.js is automatically detected).
+5. In **Environment Variables**, add `OPENAI_API_KEY`, `MODEL_NAME`, and `MODEL_PROVIDER` if you are using the hybrid mode.
+6. Click **Deploy**.
 
 ---
 
-## Known Vercel Constraints
+## ⚠️ Important Deployment Notes & Limitations
 
-- **No local file system persistence**: The app does not write to disk at runtime.
-- **No background processes**: All analysis is request/response.
-- **No large model downloads**: The classifier artifact (`model-artifact.json`) is ~4KB.
-- **Function timeout**: Default 30s; analysis completes well within this.
-- **Edge runtime**: Not used (standard Node.js serverless functions).
+- **Stateless Rate Limiting**: The built-in rate limiter is in-memory and scales across serverless container boundaries. It isolates IPs dynamically per instance and resets on serverless cold starts. No Redis or external database is required.
+- **Serverless Execution Timeout**: The OpenAI API request uses a `15s` network timeout, and the analyzer route terminates gracefully if the connection hangs.
+- **Offline Fallback**: If the optional OpenAI logprobs fetch fails (e.g., rate limits, invalid keys, timeouts), the detector continues to calculate the core linguistic score based on the offline coefficients and displays a warning note explaining that the language-model signal is temporarily unavailable.
